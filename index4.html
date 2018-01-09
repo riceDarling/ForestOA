@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head runat="server">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="Content/header.css" />
+		<link rel="stylesheet" href="Content/index.css" />
+
+		<link href="css/xiaov/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/xiaov/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+		<link href="css/xiaov/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/xiaov/components.css" id="style_components" rel="stylesheet" type="text/css" />
+		<link href="css/xiaov/plugins.css" rel="stylesheet" type="text/css" />
+		<link href="css/xiaov/layout.css" rel="stylesheet" type="text/css" />
+		<link href="css/xiaov/fen.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			.h1 {
+				display: block;
+				height: 100px;
+				line-height: 100px;
+				/*color: #EAEDF3;*/
+				color: #fff;
+				margin-left: 15px;
+			}
+			
+			#listBtn>.btngrp>a {
+				width: 32.5% !important;
+			}
+			
+			.roll {
+				height: 85px !important;
+			}
+			
+			.roll li {
+				height: 85px !important;
+			}
+			
+			.wrap {
+				height: 85px !important;
+			}
+			/*.wrap ul{
+				width: 600px !important;
+			}*/
+			
+			#tjwqMainframe_bodybox {
+				width: 126% !important;
+				height: 388px !important;
+			}
+			/*#listBtn>.btngrp {
+				border: none;
+			}*/
+			
+			.tiles .tile {
+				width: 120px !important;
+				height: 120px !important;
+			}
+			
+			.tiles .tile .tile-object>.name {
+				margin-left: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="tjwq_header" class="box-shadow22" style="background: #5A98DE;margin-top: -20px;">
+			<!--<div></div>-->
+			<h1 class="h1">森 林 公 安 OA 系 统</h1>
+		</div>
+		<div class="roll" id="roll" style="display: none;">
+			<a href="javascript:void(0);" class="btn_left"></a>
+			<a href="javascript:void(0);" class="btn_right"></a>
+			<div class="wrap">
+				<ul>
+					<li>
+						<a href="index4.html" target="">
+							<div class="target-button">
+								<img src="images/index/home.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="handle-documents.html" target="">
+							<div class="target-button">
+								<img src="images/index/8.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="admin-permission.html" target="">
+							<div class="target-button">
+								<img src="images/index/13.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="statistics-document.html">
+							<div class="target-button">
+								<img src="images/index/4.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="statistics-workingshift.html" target="">
+							<div class="target-button">
+								<img src="images/index/14.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="statistics-check.html" target="">
+							<div class="target-button">
+								<img src="images/index/5.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="statistics-notice.html" target="">
+							<div class="target-button">
+								<img src="images/index/17.png" width="70px" height="70px" />
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="nav" style="z-index: 12;">
+			<span style="margin-left:16px;">欢迎登陆本系统！您当前的位置为：首页</span>
+			<div style="float:right;">
+				<span style="margin-right:40px;">您好！超级管理员</span>
+				<!--<a id="resetPwdBtn" href="javascript:;" style="margin-right:16px;">[修改密码]</a>-->
+				<a href="javascript:;" style="margin-right:16px;">[注销]</a>
+			</div>
+		</div>
+		<div style="position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;padding-top:180px;padding-left:100px;padding-right:100px;">
+			<div style="width:100%;height:100%;position:relative;">
+				<div id="listBtn" style="position:absolute;width:100%;height:100%;">
+					<div class="btngrp">
+						<a href="javascript:;" target="">
+							<div class="target-button">
+								<div>
+									<img src="images/index/8.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									公文办理
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" target="">
+							<div class="target-button">
+								<div>
+									<img src="images/index/13.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									账号权限管理
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;">
+							<div class="target-button">
+								<div>
+									<img src="images/index/4.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									公文统计、查询
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" target="">
+							<div class="target-button">
+								<div>
+									<img src="images/index/14.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									<p>值班表</p>
+									<p>考核表登记</p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" target="">
+							<div class="target-button">
+								<div>
+									<img src="images/index/5.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									<p>工作计划</p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" target="">
+							<div class="target-button">
+								<div>
+									<img src="images/index/17.png" width="70px" height="70px" />
+								</div>
+								<div class="mt-10">
+									<p>通知通告</p>
+								</div>
+							</div>
+						</a>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="aa" style="display:none;position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;padding-top:180px;padding-left:100px;padding-right:100px;">
+			<div style="width:100%;height:100%;position:relative;">
+				<div id="listBtn" style="position:absolute;width:100%;height:100%;">
+					<div id="tjwqMainframe">
+						<div id="tjwqMainframe_bodybox">
+							<div id="tjwqMainframe_body">
+								<iframe name="mainFrame" id="mainFrame" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="handle-documents.html"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="Scripts/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="Scripts/column.js"></script>
+		<script type="text/javascript">
+			$(".itemManage").click(function() {
+				window.location = "handle-documents.html";
+			});
+
+			$('.table-sort').dataTable({
+				"aaSorting": [
+					[1, "desc"]
+				], //默认第几个排序
+				"bStateSave": true, //状态保存
+				"pading": false,
+				"searching": false,
+				"aoColumnDefs": [
+					//{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+					{
+						"orderable": false,
+						"aTargets": [1, 5]
+					} // 不参与排序的列
+				]
+			});
+
+			window.onload = function() {
+				setTimeout(btnShow, 2000);
+			};
+
+			function btnShow() {
+				var oDiv = document.getElementById('roll');
+				var oUl = oDiv.getElementsByTagName('ul')[0];
+				var aLi = oUl.getElementsByTagName('li');
+				var speed = -4;
+				var oBtn1 = oDiv.getElementsByTagName('a')[0];
+				var oBtn2 = oDiv.getElementsByTagName('a')[1];
+				var roll_timer = null;
+
+				oUl.innerHTML += oUl.innerHTML;
+				oUl.style.width = aLi[0].offsetWidth * aLi.length + 'px';
+
+				//左
+				oBtn1.onclick = function() {
+					speed = 82;
+					oUl.style.left = oUl.offsetLeft + speed + 'px';
+					if(oUl.offsetLeft < -oUl.offsetWidth / 2) {
+						oUl.style.left = 0 + 'px';
+					} else if(oUl.offsetLeft > (0)) {
+						oUl.style.left = -oUl.offsetWidth / 2 + 'px';
+					}
+				}
+				//右
+				oBtn2.onclick = function() {
+					speed = -82;
+					oUl.style.left = oUl.offsetLeft + speed + 'px';
+					if(oUl.offsetLeft < -oUl.offsetWidth / 2) {
+						oUl.style.left = 0 + 'px';
+					} else if(oUl.offsetLeft > (0)) {
+						oUl.style.left = -oUl.offsetWidth / 2 + 'px';
+					}
+				}
+			}
+
+			$('#listBtn a').click(function() {
+				$('#listBtn').hide();
+				$('#roll').show();
+				$('#aa').show();
+				$('#roll').css('z-index', '999999990');
+			})
+		</script>
+	</body>
+
+</html>
