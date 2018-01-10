@@ -30,30 +30,21 @@
 	<body>
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
-				<!--<div class="row cl">
-					<div class="formControls col-xs-8 col-sm-9">
-						<img id="maximization" src="static/h-ui.admin/images/maximum.png" style="position: absolute;left: 63px;top: -14px;cursor: pointer;" />
-					</div>
-				</div>-->
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">申请人：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<!--<input type="text" class="input-text" value="" placeholder="" id="" name="">-->
 						李四
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">标题：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<!--<input type="text" class="input-text" value="" placeholder="" id="" name="">-->
 						关于xxxx工作开展
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">详情：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<!--<textarea name="" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
-						<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>-->
 						<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
 					</div>
 				</div>
@@ -75,6 +66,7 @@
 									<th width="20%">发起人/办理人</th>
 									<th width="20%">状态</th>
 									<th width="20%">备注</th>
+									<th width="20%">操作</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -82,16 +74,19 @@
 									<th>李四</th>
 									<td>同意</td>
 									<td>予以通过</td>
+									<td><a href="javascript:;"  onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
 								</tr>
-								<tr class="success">
+								<tr class="active">
 									<th>王五</th>
 									<td>同意</td>
 									<td>予以通过....</td>
+									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
 								</tr>
-								<tr class="success">
+								<tr class="active">
 									<th>赵六</th>
 									<td>驳回</td>
 									<td></td>
+									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -174,11 +169,6 @@
 					});
 				});
 			};
-			
-			$('#maximization').click(function() {
-				//window.location.href="handle-documents-details.html";
-				window.open('handle-documents-details.html');
-			});
 		</script>
 	</body>
 

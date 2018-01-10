@@ -26,9 +26,6 @@
 
 	<body class="pos-r">
 		<div class="pos-a" style="width:248px;left:0;top:0; bottom:0; height:100%; border-right:1px solid #e5e5e5; background-color:#f5f5f5; overflow:auto; text-align: center;">
-			<!--<a id="regionAddBtn" style="text-decoration:none" class="ml-5" href="javascript:;" title="增加"><span class="label label-success radius">增加</span></a>
-			<a id="regionEditBtn" style="text-decoration:none" class="ml-5" href="javascript:;" title="修改"><span class="label label-success radius">修改</span></a>
-			<a id="regionDelBtn" style="text-decoration:none" class="ml-5" onClick="product_del(this,'10001')" href="javascript:;" title="删除"><span class="label label-success radius">删除</span></a>-->
 			<ul id="treeDemo" class="ztree"></ul>
 		</div>
 		<div style="margin-left:248px;">
@@ -36,10 +33,6 @@
 				<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
 			</nav>
 			<div class="page-container">
-				<!--<div class="text-c">
-					<input type="text" name="" id="" placeholder=" 请输入查询内容...	" style="width:250px" class="input-text">
-					<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 查询</button>
-				</div>-->
 				<div class="cl pd-5 bg-1 bk-gray mt-20">
 					<span class="l">
 						<a class="btn btn-primary radius" onclick="product_add('添加','region-manage-add.html')" href="javascript:;">
@@ -64,47 +57,11 @@
 								<td class="td-manage">
 									<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','region-manage-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 									<a style="text-decoration:none" class="ml-5" onClick="product_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-									<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','region-manage-power.html','10001')" href="javascript:;" title="分配权限"><span class="label label-success radius">分配权限</span></a>
+									<!--<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','region-manage-power.html','10001')" href="javascript:;" title="分配权限"><span class="label label-success radius">分配权限</span></a>-->
 								</td>
 							</tr>
 						</tbody>
 					</table>
-				</div>
-			</div>
-		</div>
-		<div id="addmodal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content radius">
-					<div class="modal-header">
-						<h3 class="modal-title">追加部门</h3>
-						<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
-					</div>
-					<div class="modal-body">
-						请输入要追加的部门名称:
-						<input type="text" id="editNewName" placeholder=" 请输入内容...	" style="width:250px" class="input-text">
-					</div>
-					<div class="modal-footer">
-						<button id="saveEditNewName" class="btn btn-primary">保存</button>
-						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="editmodal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content radius">
-					<div class="modal-header">
-						<h3 class="modal-title">对机构或部门名称的修改</h3>
-						<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
-					</div>
-					<div class="modal-body">
-						当前名称为:<span style="color: red;">政治处</span> 修改为:
-						<input type="text" id="editNewName" placeholder=" 请输入修改内容...	" style="width:250px" class="input-text">
-					</div>
-					<div class="modal-footer">
-						<button id="saveEditNewName" class="btn btn-primary">保存</button>
-						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -239,10 +196,7 @@
 			$(document).ready(function() {
 				var t = $("#treeDemo");
 				t = $.fn.zTree.init(t, setting, zNodes);
-				//demoIframe = $("#testIframe");
-				//demoIframe.on("load", loadReady);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
-				//zTree.selectNode(zTree.getNodeByParam("id",'11'));
 			});
 
 			var newCount = 1;
@@ -284,15 +238,6 @@
 					} // 不参与排序的列
 				]
 			});
-			/*添加*/
-			function product_add(title, url) {
-				var index = layer.open({
-					type: 2,
-					title: title,
-					content: url
-				});
-				layer.full(index);
-			}
 			/*查看*/
 			function product_show(title, url, id) {
 				var index = layer.open({
@@ -302,7 +247,15 @@
 				});
 				layer.full(index);
 			}
-
+			/*添加*/
+			function product_add(title, url) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			}
 			/*编辑*/
 			function product_edit(title, url, id) {
 				var index = layer.open({
@@ -312,7 +265,6 @@
 				});
 				layer.full(index);
 			}
-
 			/*删除*/
 			function product_del(obj, id) {
 				layer.confirm('确认要删除吗？', function(index) {
@@ -333,45 +285,6 @@
 					});
 				});
 			};
-
-			//屏蔽浏览器右键菜单  
-			/*document.oncontextmenu = function() {
-				return false;
-			};*/
-
-			$('#regionAddBtn').children().click(function() {
-
-				$("#addmodal-demo").modal("show");
-			});
-
-			$('#regionEditBtn span').click(function() {
-				$("#editmodal-demo").modal("show");
-			});
-
-			/*var self;
-			//按下鼠标  
-			$(document).on('mousedown', '#treeDemo ul li a', function(e) {
-
-				var key = e.which; //获取鼠标键位  
-				if(key == 3) { //(1:代表左键； 2:代表中键； 3:代表右键)	
-					self = $(this);
-					$('.modal-body span').text($(this).text());
-					$("#modal-demo").modal("show");
-					$('#editNewName').val(' ');
-				}
-			});*/
-			/*
-						$('#saveEditNewName').click(function() {
-							//alert($('#editNewName').val());
-							layer.confirm('确认要修改吗？', function(index) {
-								layer.msg('已修改!', {
-									icon: 6,
-									time: 1000
-								});
-							});
-							self.children('span').eq(1).text($('#editNewName').val());
-							$("#modal-demo").modal("hide");
-						});*/
 		</script>
 	</body>
 

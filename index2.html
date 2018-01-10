@@ -7,25 +7,19 @@
 		<title></title>
 		<link rel="stylesheet" href="Content/header.css" />
 		<link rel="stylesheet" href="Content/index.css" />
-		
-		
+
 		<link href="css/xiaov/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="css/xiaov/simple-line-icons.min.css" rel="stylesheet" type="text/css">
 		<link href="css/xiaov/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="css/xiaov/components.css" id="style_components" rel="stylesheet" type="text/css" />
-		<link href="css/xiaov/plugins.css" rel="stylesheet" type="text/css" />
-		<link href="css/xiaov/layout.css" rel="stylesheet" type="text/css" />
-		<link href="css/xiaov/fen.css" rel="stylesheet" type="text/css" />
 		<style type="text/css">
 			.h1 {
 				display: block;
 				height: 100px;
 				line-height: 100px;
-				/*color: #EAEDF3;*/
 				color: #fff;
 				margin-left: 15px;
 			}
-			
 			/*#listBtn>.btngrp>a {
 				width: 32.5% !important;
 			}*/
@@ -44,36 +38,43 @@
 			/*.wrap ul{
 				width: 600px !important;
 			}*/
-			#tjwqMainframe_bodybox{
+			
+			#tjwqMainframe_bodybox {
 				width: 126% !important;
 				height: 388px !important;
 			}
-			#listBtn>.btngrp{
+			
+			#listBtn>.btngrp {
 				border: none;
 			}
-			.tiles .tile{
+			
+			.tiles .tile {
 				width: 115px !important;
 				height: 115px !important;
 			}
-			.tiles .tile .tile-object>.name{
+			
+			.tiles .tile .tile-object>.name {
 				margin-left: 30px;
 			}
-			.tiles>div{
+			
+			.tiles>div {
 				float: left;
 			}
+			
 			@media only screen and (min-width: 1160px) and (max-width: 1200px) {
-				.tiles{
+				.tiles {
 					margin-left: 80px !important;
 				}
-				.tiles>div{
+				.tiles>div {
 					margin-left: 70px !important;
 				}
 			}
+			
 			@media only screen and (max-width: 1160px) {
-				.tiles{
+				.tiles {
 					margin-left: 80px !important;
 				}
-				.tiles>div{
+				.tiles>div {
 					margin-left: 80px !important;
 				}
 			}
@@ -81,74 +82,15 @@
 	</head>
 
 	<body>
-		<div id="tjwq_header" class="box-shadow22" style="margin-top: -20px;">
-			<!--<div></div>-->
-			<h1 class="h1">森 林 公 安 OA 系 统</h1>
+		<div id="tjwq_header" class="box-shadow22">
+			<div></div>
+			<!--<h1 class="h1">森 林 公 安 OA 系 统</h1>-->
 		</div>
-		<!--<div class="roll" id="roll" style="display: none;">
-			<a href="javascript:void(0);" class="btn_left"></a>
-			<a href="javascript:void(0);" class="btn_right"></a>
-			<div class="wrap">
-				<ul>
-					<li>
-						<a href="index2.html" target="">
-							<div class="target-button">
-								<img src="images/index/home.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="handle-documents.html" target="">
-							<div class="target-button">
-								<img src="images/index/8.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="admin-permission.html" target="">
-							<div class="target-button">
-								<img src="images/index/13.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="statistics-document.html">
-							<div class="target-button">
-								<img src="images/index/4.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="statistics-workingshift.html" target="">
-							<div class="target-button">
-								<img src="images/index/14.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="statistics-check.html" target="">
-							<div class="target-button">
-								<img src="images/index/5.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="statistics-notice.html" target="">
-							<div class="target-button">
-								<img src="images/index/17.png" width="70px" height="70px" />
-							</div>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>-->
-
 		<div id="nav" style="z-index: 12;">
 			<span style="margin-left:16px;">欢迎登陆本系统！您当前的位置为：首页</span>
 			<div style="float:right;">
 				<span style="margin-right:40px;">您好！超级管理员</span>
-				<!--<a id="resetPwdBtn" href="javascript:;" style="margin-right:16px;">[修改密码]</a>-->
-				<a href="Login.aspx" style="margin-right:16px;">[注销]</a>
+				<a href="login.html" style="margin-right:16px;">[注销]</a>
 			</div>
 		</div>
 		<div style="z-index: 11;position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;padding-top:180px;padding-left:100px;padding-right:100px;">
@@ -209,7 +151,7 @@
 								</div>
 								<div id="statisticsDocument" class="tile bg-green fenWelfareManage" style="margin: 50px 50px 10px 50px;">
 									<div class="tile-body">
-										<i class="fa fa-search"></i>
+										<i class="icon-bar-chart"></i>
 									</div>
 									<div class="tile-object">
 										<div class="name">
@@ -229,7 +171,7 @@
 								</div>
 								<div id="statisticsCheck" class="tile bg-green deptManage" style="margin: 50px 50px 10px 50px;">
 									<div class="tile-body">
-										<i class="icon-speedometer"></i>
+										<i class="fa fa-check-square-o"></i>
 									</div>
 									<div class="tile-object">
 										<div class="name" style="margin-left: 38px;">
@@ -257,16 +199,57 @@
 										</div>
 									</div>
 								</div>
+
+								<div id="documentsManager" class="tile bg-yellow deptManage" style="margin: 50px 50px 10px 50px;">
+									<div class="tile-body">
+										<i class="icon-settings"></i>
+									</div>
+									<div class="tile-object">
+										<div class="name">
+											公文管理
+										</div>
+									</div>
+								</div>
+								<div id="documentsSearch" class="tile bg-yellow deptManage" style="margin: 50px 50px 10px 50px;">
+									<div class="tile-body">
+										<i class="fa fa-search"></i>
+									</div>
+									<div class="tile-object">
+										<div class="name">
+											公文搜索
+										</div>
+									</div>
+								</div>
+								<div id="" class="tile bg-yellow deptManage otherManageBtn" style="margin: 50px 50px 10px 50px;">
+									<div class="tile-body">
+										<i class="icon-wrench"></i>
+									</div>
+									<div class="tile-object">
+										<div class="name">
+											设备管理
+										</div>
+									</div>
+								</div>
+								<div id="" class="tile bg-yellow deptManage otherManageBtn" style="margin: 50px 50px 10px 50px;">
+									<div class="tile-body">
+										<i class="icon-speedometer"></i>
+									</div>
+									<div class="tile-object">
+										<div class="name">
+											车辆管理
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 		<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="Scripts/column.js" ></script>
+		<script type="text/javascript" src="Scripts/column.js"></script>
 		<script type="text/javascript">
 			/*公文办理*/
 			$("#handleDocuments").click(function() {
@@ -308,7 +291,30 @@
 			$("#statisticsNotice").click(function() {
 				window.location = "statistics-notice.html";
 			});
+			/*公文管理*/
+			$("#documentsManager").click(function() {
+				window.location = "documents-manager.html";
+			});
+			/*公文搜索*/
+			$("#documentsSearch").click(function() {
+				window.location = "documents-search.html";
+			});
+
+			/*设备、车辆管理提醒*/
+			$('.otherManageBtn').click(function() {
+				layer.confirm('功能正在完善中...',{title:'提示信息'});
+			});
+
+			/*获取页面宽度、高度并设置菜单左右,垂直居中*/
+			var hH = $(window).height();
+			var hW = $(window).width();
+			var wrapH = $('#listBtn').height();
+			//var wrapW = $('#listBtn').width();
+			var _h = hH - wrapH - 100;
+			//var _w = (hW - wrapW)/2;
 			
+			$('#nav').next().css('padding-top', _h);
+			//$('#listBtn').css('margin-left',_w);
 		</script>
 	</body>
 

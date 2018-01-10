@@ -1,13 +1,3 @@
-var tjwqTitleVal = $('.tjwqtitle').text().trim();
-if($(".listbtnz").hasClass("tjwqActive")) {
-	var secVal = $('.tjwqActive').text();
-}
-if(secVal == undefined) {
-	$('#tjwqtitlenav').text('欢迎登陆本系统！您当前的位置为:' + tjwqTitleVal);
-} else {
-	$('#tjwqtitlenav').text('欢迎登陆本系统！您当前的位置为:' + tjwqTitleVal + ' > ' + secVal);
-}
-
 $('#tjwqBtn div').click(function() {
 
 	var self = $(this);
@@ -70,7 +60,6 @@ $(document).on("click", "[frameHref]", function() {
 		} else {
 			_thishref_ = $(this).text();
 		}
-
 	}
 	if(linkjump[_thishref_] != undefined && linkjump[_thishref_] != null && linkjump[_thishref_] != "") {
 		_thishref_ = linkjump[_thishref_];
@@ -78,64 +67,20 @@ $(document).on("click", "[frameHref]", function() {
 	try {
 		$("#mainFrame").attr("src", _thishref_);
 	} catch(e) {
-		//TODO handle the exception
+		//TODO 
 	}
 })
 
-window.onload = function() {
-	var oDiv = document.getElementById('roll');
-	var oUl = oDiv.getElementsByTagName('ul')[0];
-	var aLi = oUl.getElementsByTagName('li');
-	var speed = -4;
-	var oBtn1 = oDiv.getElementsByTagName('a')[0];
-	var oBtn2 = oDiv.getElementsByTagName('a')[1];
-	var roll_timer = null;
 
-	oUl.innerHTML += oUl.innerHTML;
-	oUl.style.width = aLi[0].offsetWidth * aLi.length + 'px';
 
-	//左
-	oBtn1.onclick = function() {
-		speed = 82;
-		oUl.style.left = oUl.offsetLeft + speed + 'px';
-		if(oUl.offsetLeft < -oUl.offsetWidth / 2) {
-			oUl.style.left = 0 + 'px';
-		} else if(oUl.offsetLeft > (0)) {
-			oUl.style.left = -oUl.offsetWidth / 2 + 'px';
-		}
-	}
-	//右
-	oBtn2.onclick = function() {
-		speed = -82;
-		oUl.style.left = oUl.offsetLeft + speed + 'px';
-		if(oUl.offsetLeft < -oUl.offsetWidth / 2) {
-			oUl.style.left = 0 + 'px';
-		} else if(oUl.offsetLeft > (0)) {
-			oUl.style.left = -oUl.offsetWidth / 2 + 'px';
-		}
-	}
-};
 
-/*--------------------------------*/
-$('.chartmapbox_xk ul a').click(function() {
+/*获取时间*/
 
-	if(!$(this).is(".on_xk")) {
-		$(this).addClass("on_xk").parent("li").siblings("li").children("a").removeClass("on_xk");
-
-	}
-	if($(this)[0].id == "id4") {
-		$("#chart_xk").css("display", "block");
-		$("#chart_xk1").css("display", "none");
-		$("#chart_xk2").css("display", "none");
-	}
-	if($(this)[0].id == "id5") {
-		$("#chart_xk").css("display", "none");
-		$("#chart_xk1").css("display", "block");
-		$("#chart_xk2").css("display", "none");
-	}
-	if($(this)[0].id == "id6") {
-		$("#chart_xk").css("display", "none");
-		$("#chart_xk1").css("display", "none");
-		$("#chart_xk2").css("display", "block");
-	}
-});
+function GetDateStr(){
+	var data = new Date();
+	var _y = data.getFullYear();
+	var _m = data.getMonth()+1;
+	var _d = data.getDate();
+	var newDate = _y + '-' + _m + '-' + _d;
+	return newDate;
+}
