@@ -61,24 +61,51 @@
 				float: left;
 			}
 			
-			@media only screen and (min-width: 1160px) and (max-width: 1200px) {
-				.tiles {
+			@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+				/*.tiles {
 					margin-left: 80px !important;
-				}
+				}*/
 				.tiles>div {
-					margin-left: 70px !important;
+					margin-left: 10px !important;
+					width: 85px !important;
+					height: 85px !important;
+					margin: 50px 50px 10px 50px !important;
 				}
 			}
 			
-			@media only screen and (max-width: 1160px) {
+			@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+				/*.tiles {
+					margin-left: 80px !important;
+				}*/
+				.tiles>div {
+					margin-left: 10px !important;
+					width: 85px !important;
+					height: 85px !important;
+					margin: 50px -10px 10px 50px !important;
+				}
+			}
+			
+			/*@media only screen and (max-width: 1160px) {
 				.tiles {
 					margin-left: 80px !important;
 				}
 				.tiles>div {
 					margin-left: 80px !important;
 				}
+			}*/
+			
+			@media only screen and (min-width: 600px)  and (max-width: 1000px) {
+				/*.tiles {
+					margin-left: 16px !important;
+				}*/
+				.tiles>div {
+					width: 85px !important;
+					height: 85px !important;
+					margin: 50px -25px 10px 50px !important;
+				}
 			}
 		</style>
+
 	</head>
 
 	<body>
@@ -316,7 +343,9 @@
 
 			/*设备、车辆管理提醒*/
 			$('.otherManageBtn').click(function() {
-				layer.confirm('功能正在完善中...',{title:'提示信息'});
+				layer.confirm('功能正在完善中...', {
+					title: '提示信息'
+				});
 			});
 
 			/*获取页面宽度、高度并设置菜单左右,垂直居中*/
@@ -326,9 +355,10 @@
 			//var wrapW = $('#listBtn').width();
 			var _h = hH - wrapH - 100;
 			//var _w = (hW - wrapW)/2;
-			
+
 			$('#nav').next().css('padding-top', _h);
 			//$('#listBtn').css('margin-left',_w);
+
 		</script>
 	</body>
 
