@@ -32,38 +32,7 @@
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>请选择下级节点办理人：</label>
 					<div class="formControls col-xs-8 col-sm-9" style="height: 120px; overflow-y: scroll;">
-						<!--<ul id="treeDemo" class="ztree"></ul>-->
-						<!--<div class="skin-minimal">
-							<div class="check-box">
-								<input type="checkbox" id="checkbox-1">
-								<label for="checkbox-1">XXX科长</label>
-							</div>
-						</div>
-						<div class="mt-20 skin-minimal">
-							<div class="check-box">
-								<input type="checkbox" id="checkbox-2">
-								<label for="checkbox-2">XXX副科长</label>
-							</div>
-						</div>
-						<div class="mt-20 skin-minimal">
-							<div class="check-box">
-								<input type="checkbox" id="checkbox-2">
-								<label for="checkbox-2">XXX副科长</label>
-							</div>
-						</div>-->
-						<input type="checkbox" id="checkbox-1">
-						<label for="checkbox-1">XXX科长</label><br/>
-						<input type="checkbox" id="checkbox-2">
-						<label for="checkbox-2">XXX副科长</label><br/>
-						<input type="checkbox" id="checkbox-3">
-						<label for="checkbox-3">XXX副科长</label><br/>
-						<input type="checkbox" id="checkbox-4">
-						<label for="checkbox-4">XXX副科长</label><br/>
-					</div>
-				</div>
-				<div class="row cl">
-					<div class="form-label col-xs-4 col-sm-3" style="margin-left: 83px;">
-						<input id="allCheckBtn" class="btn radius btn-secondary" type="button" value="全选">
+						<ul id="treeDemo" class="ztree"></ul>
 					</div>
 				</div>
 				<div class="row cl">
@@ -128,7 +97,9 @@
 					focusCleanup: true,
 					success: "valid",
 					submitHandler: function(form) {
+						//$(form).ajaxSubmit();
 						var index = parent.layer.getFrameIndex(window.name);
+						//parent.$('.btn-refresh').click();
 						parent.layer.close(index);
 					}
 				});
@@ -204,22 +175,22 @@
 				{
 					id: 121,
 					pId: 111,
-					name: "张xx"
+					name: "张三"
 				},
 				{
 					id: 122,
 					pId: 112,
-					name: "李xx"
+					name: "李四"
 				},
 				{
 					id: 123,
 					pId: 113,
-					name: "王xxx"
+					name: "王五"
 				},
 				{
 					id: 124,
 					pId: 114,
-					name: "赵xx"
+					name: "赵六"
 				},
 				{
 					id: 12,
@@ -247,11 +218,6 @@
 				var t = $("#treeDemo");
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
-			});
-
-			/*全选*/
-			$("#allCheckBtn").click(function() {
-				$("input:checkbox").attr("checked", 'true');
 			});
 		</script>
 	</body>

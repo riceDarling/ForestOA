@@ -33,15 +33,33 @@
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>申请人：</label>
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>拟稿人：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="" placeholder="" id="" name="">
+						<input type="text" class="input-text" value="周xx" placeholder="" id="" name="">
 					</div>
 				</div>
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>公文标题：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="" placeholder="" id="" name="">
+						<input type="text" class="input-text" value="关于xxxx工作的落实情况" placeholder="" id="" name="">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文号：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>请选择文件类型：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box inline">
+						<select name="" class="select">
+							<option value="0">请选择文件类型</option>
+							<option value="1" selected>上行文</option>
+							<option value="2">下行文</option>
+						</select>
+					</span>
 					</div>
 				</div>
 				<div class="row cl">
@@ -50,11 +68,14 @@
 						<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
 					</div>
 				</div>
+
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2">备注：</label>
+					<label class="form-label col-xs-4 col-sm-2">经办意见：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<textarea name="" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
-						<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+						<textarea name="" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">
+								工作已落实到位...
+						</textarea>
+						<!--<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>-->
 					</div>
 				</div>
 				<div class="row cl">
@@ -97,6 +118,41 @@
 		<script type="text/javascript">
 			var ue = UE.getEditor('editor');
 
+			ue.ready(function() {
+				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
+			});
+
+			$(".textarea").Huitextarealength({
+				minlength: 0,
+				maxlength: 200
+			});
+			
+			
+			$('.skin-minimal input').iCheck({
+				checkboxClass: 'icheckbox-blue',
+				radioClass: 'iradio-blue',
+				increaseArea: '20%'
+			});
+
+			//表单验证
+			$("#form-article-add").validate({
+				rules: {
+					areaname: {
+						required: true,
+					},
+
+				},
+				onkeyup: false,
+				focusCleanup: true,
+				success: "valid",
+				submitHandler: function(form) {
+					//$(form).ajaxSubmit();
+					var index = parent.layer.getFrameIndex(window.name);
+					//parent.$('.btn-refresh').click();
+					parent.layer.close(index);
+				}
+			});
+
 			var setting = {
 				check: {
 					enable: true,
@@ -136,7 +192,7 @@
 			var zNodes = [{
 					id: 1,
 					pId: 0,
-					name: "各地区及部门管理",
+					name: "赤峰市森林公安局",
 					open: true
 				},
 				{
@@ -152,37 +208,37 @@
 				{
 					id: 112,
 					pId: 11,
-					name: "财务科"
+					name: "财务处"
 				},
 				{
 					id: 113,
 					pId: 11,
-					name: "法制科"
+					name: "法制处"
 				},
 				{
 					id: 114,
 					pId: 11,
-					name: "户政科"
+					name: "户政处"
 				},
 				{
 					id: 121,
 					pId: 111,
-					name: "张三"
+					name: "张xx"
 				},
 				{
 					id: 122,
 					pId: 112,
-					name: "李四"
+					name: "李xx"
 				},
 				{
 					id: 123,
 					pId: 113,
-					name: "王五"
+					name: "王xx"
 				},
 				{
 					id: 124,
 					pId: 114,
-					name: "赵六"
+					name: "赵xx"
 				},
 				{
 					id: 12,

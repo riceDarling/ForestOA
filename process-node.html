@@ -25,11 +25,63 @@
 		<![endif]-->
 
 		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 
 	<body>
 		<div class="page-container">
+
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
+				<div class="row cl">
+					<div class="formControls col-xs-8 col-sm-9">
+						<div class="clearfix course_nr" style="margin-left: 85px;">
+							<ul class="course_nr2">
+								<li>
+									拟稿人
+									<div class="shiji">
+										<h1>拟稿人</h1>
+										<p>内容描述1。</p>
+									</div>
+								</li>
+								<li>
+									核稿
+									<div class="shiji">
+										<h1>1999</h1>
+										<p>内容描述2；</p>
+									</div>
+								</li>
+								<li>
+									审稿
+									<div class="shiji">
+										<h1>2003</h1>
+										<p>内容描述3</p>
+									</div>
+								</li>
+								<li>
+									签批
+									<div class="shiji">
+										<h1>2007</h1>
+										<p>内容描述4</p>
+									</div>
+								</li>
+								<li>
+									校核
+									<div class="shiji">
+										<h1>2008</h1>
+										<p>内容描述5</p>
+									</div>
+								</li>
+								<li>
+									签章
+									<div class="shiji">
+										<h1>2009</h1>
+										<p>内容描述6</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">拟稿人：</label>
 					<div class="formControls col-xs-8 col-sm-9">
@@ -80,19 +132,25 @@
 									<th>李四</th>
 									<td>同意</td>
 									<td>予以通过</td>
-									<td><a href="javascript:;"  onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td>
+										<a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a>
+									</td>
 								</tr>
 								<tr class="active">
 									<th>王五</th>
 									<td>同意</td>
 									<td>予以通过....</td>
-									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td>
+										<a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a>
+									</td>
 								</tr>
 								<tr class="active">
 									<th>赵六</th>
 									<td>驳回</td>
 									<td></td>
-									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td>
+										<a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -118,21 +176,28 @@
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
 		<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js">
-		</script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
 		<script type="text/javascript">
+			//首页大事记
+			$('.course_nr2 li').hover(function() {
+				$(this).find('.shiji').slideDown(600);
+			}, function() {
+				$(this).find('.shiji').slideUp(400);
+			});
+
 			var ue = UE.getEditor('editor');
 			ue.ready(function() {
 				ue.setContent('<p>关于XXXX工作的开展!望领导给予支持</p>');
 			});
-			
+
+			/*textarea 文本框长度*/
 			$(".textarea").Huitextarealength({
 				minlength: 0,
 				maxlength: 200
 			});
-			
-			
+
 			/*添加*/
 			function product_add(title, url) {
 				var index = layer.open({

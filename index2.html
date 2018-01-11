@@ -5,8 +5,8 @@
 	<head runat="server">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="Content/header.css" />
-		<link rel="stylesheet" href="Content/index.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/index.css" />
 
 		<link href="css/xiaov/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="css/xiaov/simple-line-icons.min.css" rel="stylesheet" type="text/css">
@@ -220,7 +220,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="" class="tile bg-yellow deptManage" style="margin: 50px 50px 10px 50px;">
+								<div id="unitFileManagement" class="tile bg-yellow deptManage" style="margin: 50px 50px 10px 50px;">
 									<div class="tile-body">
 										<i class="fa fa-credit-card"></i>
 									</div>
@@ -259,7 +259,7 @@
 		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 		<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="Scripts/column.js"></script>
+		<script type="text/javascript" src="js/column.js"></script>
 		<script type="text/javascript">
 			/*公文办理*/
 			$("#handleDocuments").click(function() {
@@ -308,6 +308,10 @@
 			/*公文搜索*/
 			$("#documentsSearch").click(function() {
 				window.location = "documents-search.html";
+			});
+			/*收发文单位管理*/
+			$("#unitFileManagement").click(function() {
+				window.location = "unit-file-management.html";
 			});
 
 			/*设备、车辆管理提醒*/
