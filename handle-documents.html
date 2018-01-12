@@ -30,15 +30,15 @@
 		<div class="page-container">
 
 			<div class="text-c">
-					<label>发文类型:</label>
-					<span class="select-box inline">
-						<select name="" class="select">
-							<option value="0">全部</option>
-							<option value="1">上行文</option>
-							<option value="2">下行文</option>
-						</select>
-					</span> 
-				
+				<label>发文类型:</label>
+				<span class="select-box inline">
+					<select name="" class="select">
+						<option value="0">全部</option>
+						<option value="1">上行文</option>
+						<option value="2">下行文</option>
+					</select>
+				</span>
+
 				<!--日期范围：
 				<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;"> -
 				<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">-->
@@ -51,6 +51,13 @@
 					<a class="btn btn-primary radius" data-title="发起" onclick="product_add('添加','handle-documents-add.html')" href="javascript:;">
 						<i class="Hui-iconfont">&#xe600;</i> 发起
 					</a>
+					<span class="btn-upload form-group">
+						<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
+						<input type="file" multiple name="file-2" class="input-file">
+					</span>
+					<span class="btn-upload form-group">
+						<a href="javascript:void();" class="btn btn-primary radius upload-btn" onclick="product_add('下载','download.html')"><i class="Hui-iconfont">&#xe642;</i> 下载</a>
+					</span>
 				</span>
 			</div>
 			<div class="mt-20">
@@ -81,6 +88,7 @@
 								<input class="btn radius btn-warning" type="button" value="驳回" onClick="product_edit('驳回','personnel-manage-reject.html','10001')">
 								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_show('查看详情','handle-documents-details.html','10001')">
 								<input class="btn btn-primary radius" type="button" value="流程节点" onClick="product_show('流程节点','process-node.html','10001')">
+								<input id="btnPrint" class="btn btn-primary radius" type="button" value="打印" onClick="product_show('打印','handle-documents-add2.html')">
 							</td>
 						</tr>
 						<tr class="text-c">
@@ -134,12 +142,10 @@
 				</table>
 			</div>
 		</div>
-		<!--_footer 作为公共模版分离出去-->
 		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
 		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
-		<!--/_footer 作为公共模版分离出去-->
 
 		<!--请在下方写此页面业务相关的脚本-->
 		<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
