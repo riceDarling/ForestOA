@@ -7,8 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<link rel="Bookmark" href="/favicon.ico">
-		<link rel="Shortcut Icon" href="/favicon.ico" />
+		<title>赤峰市森林公安网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 		<!--[if lt IE 9]>
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
@@ -27,18 +28,61 @@
 
 		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
+		<style type="text/css">
+			.radio-box{
+				padding-left: 0 !important;
+			}
+		</style>
+	
 	</head>
 
 	<body>
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
+
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>拟稿人：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-2">
 						<input type="text" class="input-text" value="周xx" placeholder="" id="" name="">
 					</div>
+
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>公文标题：</label>
+					<div class="formControls col-xs-8 col-sm-2">
+						<input type="text" class="input-text" value="关于xxxx工作的落实情况" placeholder="" id="" name="">
+					</div>
+
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文号：</label>
+					<div class="formControls col-xs-8 col-sm-2">
+						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
+					</div>
 				</div>
+
 				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>附件：</label>
+					<div class="formControls col-xs-8 col-sm-4">
+						<span class="btn-upload form-group">
+							<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
+							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
+							<input type="file" multiple name="file-2" class="input-file">
+						</span>
+					</div>
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>存档期限：</label>
+					<div class="formControls col-xs-8 col-sm-4">
+						<div class="radio-box">
+							<input type="radio" id="radio-1" name="demo-radio1">
+							<label for="radio-1">10年</label>
+						</div>
+						<div class="radio-box">
+							<input type="radio" id="radio-1" name="demo-radio1">
+							<label for="radio-1">30年</label>
+						</div>
+						<div class="radio-box">
+							<input type="radio" id="radio-1" name="demo-radio1">
+							<label for="radio-1">永久</label>
+						</div>
+					</div>
+				</div>
+				<!--<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>公文标题：</label>
 					<div class="formControls col-xs-8 col-sm-9">
 						<input type="text" class="input-text" value="关于xxxx工作的落实情况" placeholder="" id="" name="">
@@ -51,6 +95,16 @@
 					</div>
 				</div>
 				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>附件：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="btn-upload form-group">
+							<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
+							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
+							<input type="file" multiple name="file-2" class="input-file">
+						</span>
+					</div>
+				</div>-->
+				<!--<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>请选择文件类型：</label>
 					<div class="formControls col-xs-8 col-sm-9">
 						<span class="select-box inline">
@@ -61,17 +115,17 @@
 						</select>
 					</span>
 					</div>
-				</div>
+				</div>-->
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>详情：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-10">
 						<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
 					</div>
 				</div>
 
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">经办意见：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-10">
 						<textarea name="" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">
 								工作已落实到位...
 						</textarea>
@@ -80,7 +134,7 @@
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">请选择节点办理人：</label>
-					<div class="formControls col-xs-8 col-sm-9" style="height: 220px; overflow-y: scroll;">
+					<div class="formControls col-xs-8 col-sm-10" style="height: 220px; overflow-y: scroll;">
 						<ul id="treeDemo" class="ztree"></ul>
 					</div>
 				</div>
@@ -92,6 +146,8 @@
 				<div class="row cl">
 					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
 						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+						<!--<button onclick="product_add('核稿','handle-documents-add22.html')" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>-->
+						<!--<input class="btn btn-primary radius" type="button" value="保存并提交审核" onClick="product_edit('保存并提交审核','handle-documents-add22.html','10001')">-->
 						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
 						<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
 					</div>
@@ -126,8 +182,7 @@
 				minlength: 0,
 				maxlength: 200
 			});
-			
-			
+
 			$('.skin-minimal input').iCheck({
 				checkboxClass: 'icheckbox-blue',
 				radioClass: 'iradio-blue',
@@ -267,6 +322,54 @@
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
+
+			/*查看*/
+			function product_show(title, url, id) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			}
+			/*添加*/
+			function product_add(title, url) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			};
+			/*修改*/
+			function product_edit(title, url, id) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			};
+			/*删除、撤销*/
+			function product_del(obj, id) {
+				layer.confirm('确认要撤销吗？', function(index) {
+					$.ajax({
+						type: 'POST',
+						url: '',
+						dataType: 'json',
+						success: function(data) {
+							$(obj).parents("tr").remove();
+							layer.msg('已撤销!', {
+								icon: 1,
+								time: 1000
+							});
+						},
+						error: function(data) {
+							console.log(data.msg);
+						},
+					});
+				});
+			};
 		</script>
 	</body>
 

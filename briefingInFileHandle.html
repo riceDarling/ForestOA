@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+
+<![endif]-->
+		<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+		<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+
+		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
+		<title>赤峰市森林公安局网上办公系统</title>
+		
+		<style type="text/css">
+			.radio-box {
+				padding-left: 0 !important;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="page-container">
+			<form action="" method="post" class="form form-horizontal" id="form-article-add">
+				<h1 style="text-align: center;">赤峰市森林公安局文件传办单</h1>
+				<table class="table table-border table-bordered">
+					<thead>
+						<tr>
+							<th width="10%">来文单位</th>
+							<th colspan="8">
+								<input type="text" placeholder="" value="xxxx科室" class="input-text radius size-M">
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>来文文号</th>
+							<td><input type="text" placeholder="" value="无" class="input-text radius size-M"></td>
+							<th>份数</th>
+							<td><input type="text" placeholder="" value="无" class="input-text radius size-M"></td>
+							<th>页数</th>
+							<td><input type="text" placeholder="" value="无" class="input-text radius size-M"></td>
+							<th>存储年限</th>
+							<td>
+								<div class="radio-box">
+									<input type="radio" id="radio-1" name="demo-radio1">
+									<label for="radio-1">10年</label>
+								</div>
+								<div class="radio-box">
+									<input type="radio" id="radio-1" name="demo-radio1">
+									<label for="radio-1">30年</label>
+								</div>
+								<div class="radio-box">
+									<input type="radio" id="radio-1" name="demo-radio1">
+									<label for="radio-1">永久</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>顺序 号</th>
+							<td colspan="4"><input type="text" placeholder="" value="无" class="input-text radius size-M"></td>
+							<th>收文日期</th>
+							<td colspan="4">
+								<input type="text" onfocus="WdatePicker()" id="logmin" class="input-text radius size-M Wdate">
+							</td>
+						</tr>
+						<tr>
+							<th>题目</th>
+							<th colspan="8">
+								<input type="text" placeholder="" value="XXXXXXX关于工作开展" class="input-text radius size-M">
+							</th>
+						</tr>
+						<tr>
+							<th>拟办意见</th>
+							<th colspan="8">
+								<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							</th>
+						</tr>
+						<tr>
+							<th>局长批示</th>
+							<th colspan="8">
+								<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							</th>
+						</tr>
+						<tr>
+							<th>分管领导批示</th>
+							<th colspan="8">
+								<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							</th>
+						</tr>
+						<tr>
+							<th>科室负责人意见</th>
+							<th colspan="8">
+								<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							</th>
+						</tr>
+						<tr>
+							<th>办理情况</th>
+							<th colspan="8">
+								<input type="text" placeholder="" value="" class="input-text radius size-M">
+							</th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>附件：</label>
+					<div class="formControls col-xs-8 col-sm-4">
+						<!--<span class="btn-upload form-group">
+							<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
+							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
+							<input type="file" multiple name="file-2" class="input-file">
+						</span>-->
+						<a onClick="wordDetails()" href="Javascript:;">xxxxxxx附件</a>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">请选择节点办理人：</label>
+					<div class="formControls col-xs-8 col-sm-10" style="height: 200px; overflow-y: scroll;">
+						<ul id="treeDemo" class="ztree"></ul>
+					</div>
+				</div>
+				<div class="row cl">
+					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+						<input class="btn btn-primary radius" type="button" value="&nbsp;&nbsp;办理&nbsp;&nbsp;">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="modal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<h3 class="modal-title">附件详情</h3>
+						<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
+					</div>
+					<div class="modal-body">
+						<script id="editor" type="text/plain" style="width:100%;height:100%;"></script>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary">提交</button>
+						<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+
+		<!--请在下方写此页面业务相关的脚本-->
+		<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+		<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+		<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+		<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+		<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+		<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js">
+		</script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+		<script type="text/javascript">
+			function wordDetails() {
+				$("#modal-demo").modal("show")
+			}
+
+			var ue = UE.getEditor('editor');
+
+			ue.ready(function() {
+				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
+			});
+
+			/*$(".textarea").Huitextarealength({
+				minlength: 0,
+				maxlength: 200
+			});*/
+
+			$('.skin-minimal input').iCheck({
+				checkboxClass: 'icheckbox-blue',
+				radioClass: 'iradio-blue',
+				increaseArea: '20%'
+			});
+
+			//表单验证
+			$("#form-article-add").validate({
+				rules: {
+					areaname: {
+						required: true,
+					},
+
+				},
+				onkeyup: false,
+				focusCleanup: true,
+				success: "valid",
+				submitHandler: function(form) {
+					//$(form).ajaxSubmit();
+					var index = parent.layer.getFrameIndex(window.name);
+					//parent.$('.btn-refresh').click();
+					parent.layer.close(index);
+				}
+			});
+
+			var setting = {
+				check: {
+					enable: true,
+					chkStyle: "checkbox",
+					chkboxType: {
+						"Y": "ps",
+						"N": "ps"
+					}
+				},
+				view: {
+					dblClickExpand: false,
+					showLine: false,
+					selectedMulti: false
+				},
+				data: {
+					simpleData: {
+						enable: true,
+						idKey: "id",
+						pIdKey: "pId",
+						rootPId: ""
+					}
+				},
+				callback: {
+					beforeClick: function(treeId, treeNode) {
+						var zTree = $.fn.zTree.getZTreeObj("tree");
+						if(treeNode.isParent) {
+							zTree.expandNode(treeNode);
+							return false;
+						} else {
+							//demoIframe.attr("src",treeNode.file + ".html");
+							return true;
+						}
+					}
+				}
+			};
+
+			var zNodes = [{
+					id: 1,
+					pId: 0,
+					name: "赤峰市森林公安局",
+					open: true
+				},
+				{
+					id: 11,
+					pId: 1,
+					name: "赤峰市公安局"
+				},
+				{
+					id: 111,
+					pId: 11,
+					name: "政治处"
+				},
+				{
+					id: 112,
+					pId: 11,
+					name: "财务处"
+				},
+				{
+					id: 113,
+					pId: 11,
+					name: "法制处"
+				},
+				{
+					id: 114,
+					pId: 11,
+					name: "户政处"
+				},
+				{
+					id: 121,
+					pId: 111,
+					name: "张xx"
+				},
+				{
+					id: 122,
+					pId: 112,
+					name: "李xx"
+				},
+				{
+					id: 123,
+					pId: 113,
+					name: "王xx"
+				},
+				{
+					id: 124,
+					pId: 114,
+					name: "赵xx"
+				},
+				{
+					id: 12,
+					pId: 1,
+					name: "赤峰市公安局2"
+				},
+				{
+					id: 121,
+					pId: 12,
+					name: "刑侦"
+				},
+				{
+					id: 122,
+					pId: 12,
+					name: "治安"
+				},
+				{
+					id: 123,
+					pId: 12,
+					name: "户政"
+				}
+			];
+
+			$(document).ready(function() {
+				var t = $("#treeDemo");
+				t = $.fn.zTree.init(t, setting, zNodes);
+				var zTree = $.fn.zTree.getZTreeObj("tree");
+			});
+
+			/*查看*/
+			function product_show(title, url, id) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			}
+			/*添加*/
+			function product_add(title, url) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			};
+			/*修改*/
+			function product_edit(title, url, id) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			};
+			/*删除、撤销*/
+			function product_del(obj, id) {
+				layer.confirm('确认要撤销吗？', function(index) {
+					$.ajax({
+						type: 'POST',
+						url: '',
+						dataType: 'json',
+						success: function(data) {
+							$(obj).parents("tr").remove();
+							layer.msg('已撤销!', {
+								icon: 1,
+								time: 1000
+							});
+						},
+						error: function(data) {
+							console.log(data.msg);
+						},
+					});
+				});
+			};
+		</script>
+	</body>
+
+</html>

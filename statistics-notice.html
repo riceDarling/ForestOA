@@ -20,7 +20,9 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-		<title></title>
+		<title>赤峰市森林公安网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
 	</head>
 
@@ -40,7 +42,9 @@
 				<div class="cl pd-5 bg-1 bk-gray mt-20">
 					<span class="l">
 						<a class="btn btn-primary radius" onclick="product_add('添加','statistics-notice-add.html')" href="javascript:;">
-							<i class="Hui-iconfont">&#xe600;</i> 添加</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+							<i class="Hui-iconfont">&#xe600;</i> 添加</a></span> 
+							<!--<span class="r">共有数据：<strong>54</strong> 条</span> -->
+				</div>
 				<div class="mt-20">
 					<table tablename="thistable" class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 						<thead>
@@ -60,8 +64,8 @@
 								<td>会议</td>
 								<td class="f-14 td-manage">
 									<!--<a style="text-decoration:none" onClick="this_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe6e4;</i></a>-->
-									<a style="text-decoration:none" class="ml-5" onClick="this_details('详细','statistics-notice-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
-									<a style="text-decoration:none" class="ml-5" onClick="this_edit('编辑','statistics-notice-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+									<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-notice-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
+									<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','statistics-notice-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 									<a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 								</td>
 							</tr>
@@ -169,7 +173,7 @@
 			var zNodes = [{
 					id: 1,
 					pId: 0,
-					name: "森林公安结构树",
+					name: "赤峰市森林公安局",
 					open: true
 				},
 				{
@@ -200,22 +204,22 @@
 				{
 					id: 121,
 					pId: 111,
-					name: "张三"
+					name: "张xx"
 				},
 				{
 					id: 122,
 					pId: 112,
-					name: "李四"
+					name: "李xx"
 				},
 				{
 					id: 123,
 					pId: 113,
-					name: "王五"
+					name: "王xx"
 				},
 				{
 					id: 124,
 					pId: 114,
-					name: "赵六"
+					name: "赵xx"
 				},
 				{
 					id: 12,
@@ -242,10 +246,7 @@
 			$(document).ready(function() {
 				var t = $("#treeDemo");
 				t = $.fn.zTree.init(t, setting, zNodes);
-				//demoIframe = $("#testIframe");
-				//demoIframe.on("load", loadReady);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
-				//zTree.selectNode(zTree.getNodeByParam("id",'11'));
 			});
 
 			$('.table-sort').dataTable({
@@ -263,15 +264,7 @@
 					} // 不参与排序的列
 				]
 			});
-			/*添加*/
-			function product_add(title, url) {
-				var index = layer.open({
-					type: 2,
-					title: title,
-					content: url
-				});
-				layer.full(index);
-			}
+			
 			/*查看*/
 			function product_show(title, url, id) {
 				var index = layer.open({
@@ -281,7 +274,15 @@
 				});
 				layer.full(index);
 			}
-
+			/*添加*/
+			function product_add(title, url) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			}
 			/*编辑*/
 			function product_edit(title, url, id) {
 				var index = layer.open({
@@ -291,7 +292,6 @@
 				});
 				layer.full(index);
 			}
-
 			/*删除*/
 			function product_del(obj, id) {
 				layer.confirm('确认要删除吗？', function(index) {

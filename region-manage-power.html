@@ -7,8 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<link rel="Bookmark" href="/favicon.ico">
-		<link rel="Shortcut Icon" href="/favicon.ico" />
+		<title>赤峰市森林公安网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 		<!--[if lt IE 9]>
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
@@ -22,13 +23,12 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-		<title></title>
 	</head>
 
 	<body>
 		<article class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-admin-role-add">
-				<div class="row cl">
+				<!--<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-3">分配权限：</label>
 					<div class="formControls col-xs-8 col-sm-9">
 						<dl class="permission-list">
@@ -159,6 +159,328 @@
 						
 						
 					</div>
+				</div>-->
+				<div id="tab-system" class="HuiTab" style="width: 100%;">
+					<div class="tabBar cl" style="height: 30px;">
+						<span>权限</span>
+						<span>功能</span>
+					</div>
+					<div class="tabCon" style="height: 300px;overflow-y: scroll;overflow-x: hidden;">
+						<div class="row cl">
+							<div class="formControls col-xs-8 col-sm-9">
+								<dl class="permission-list">
+									<dt>
+								<label>
+									<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+										公文管理模块
+								</label>
+							</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											公文管理
+										</label>
+									</dt>
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											简报管理
+										</label>
+									</dt>
+										</dl>
+									</dd>
+								</dl>
+
+								<dl class="permission-list">
+									<dt>
+								<label>
+									<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+										账号权限管理模块
+								</label>
+							</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											权限管理
+										</label>
+									</dt>
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											组织管理
+										</label>
+									</dt>
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											人员管理
+										</label>
+									</dt>
+										</dl>
+									</dd>
+								</dl>
+
+								<dl class="permission-list">
+									<dt>
+								<label>
+									<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+										公文统计查询模块
+								</label>
+							</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											公文统计查询	
+										</label>
+									</dt>
+										</dl>
+									</dd>
+								</dl>
+
+								<dl class="permission-list">
+									<dt>
+								<label>
+									<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+										值班表及考核表登记模块
+								</label>
+							</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											值班表	
+										</label>
+									</dt>
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											考核表	
+										</label>
+									</dt>
+										</dl>
+									</dd>
+								</dl>
+
+								<dl class="permission-list">
+									<dt>
+								<label>
+									<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+										工作计划及通知通告模块
+								</label>
+							</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											工作计划	
+										</label>
+									</dt>
+											<dt>
+										<label class="">
+											<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+											通知通告	
+										</label>
+									</dt>
+										</dl>
+									</dd>
+								</dl>
+
+							</div>
+						</div>
+					</div>
+					<div class="tabCon" style="height: 300px;overflow-y: scroll;overflow-x: hidden;">
+						<div class="row cl">
+							<div class="formControls col-xs-8 col-sm-9">
+								<dl class="permission-list">
+									<dt>
+										<label>
+										<input type="checkbox" value="" name="" id="">
+											公文管理模块
+										</label>
+									</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													查看详情
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													同意
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													驳回
+												</label>
+											</dt>
+										</dl>
+									</dd>
+								</dl>
+
+								<dl class="permission-list">
+									<dt>
+										<label>
+										<input type="checkbox" value="" name="" id="">
+											账号权限管理模块
+										</label>
+									</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													查看详情
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													编辑
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													修改
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													删除
+												</label>
+											</dt>
+										</dl>
+									</dd>
+								</dl>
+								
+								<dl class="permission-list">
+									<dt>
+										<label>
+										<input type="checkbox" value="" name="" id="">
+											公文统计查询
+										</label>
+									</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													查看详情
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													编辑
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													修改
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													删除
+												</label>
+											</dt>
+										</dl>
+									</dd>
+								</dl>
+								
+								<dl class="permission-list">
+									<dt>
+										<label>
+										<input type="checkbox" value="" name="" id="">
+											值班表及考核表登记管理模块
+										</label>
+									</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													查看详情
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													编辑
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													修改
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													删除
+												</label>
+											</dt>
+										</dl>
+									</dd>
+								</dl>
+								
+								<dl class="permission-list">
+									<dt>
+										<label>
+										<input type="checkbox" value="" name="" id="">
+											工作计划及通知通告管理模块
+										</label>
+									</dt>
+									<dd>
+										<dl class="cl permission-list2">
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													查看详情
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													编辑
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													修改
+												</label>
+											</dt>
+											<dt>
+												<label class="">
+													<input type="checkbox" value="" name="" id="">
+													删除
+												</label>
+											</dt>
+										</dl>
+									</dd>
+								</dl>
+								
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="row cl">
 					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
@@ -197,7 +519,13 @@
 						}
 					}
 				});
-
+				
+				$("#tab-system").Huitab({
+					index: 0
+				});
+				
+				
+				
 				/*验证(不为空等验证方式)*/
 				$("#form-admin-role-add").validate({
 					rules: {

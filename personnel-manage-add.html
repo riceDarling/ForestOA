@@ -7,8 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<link rel="Bookmark" href="/favicon.ico">
-		<link rel="Shortcut Icon" href="/favicon.ico" />
+		<title>赤峰市森林公安网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 		<!--[if lt IE 9]>
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
@@ -22,17 +23,17 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-
-		<title></title>
+		
+		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
 	</head>
 
 	<body>
 		<article class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-admin-role-add">
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>工号：</label>
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>警号：</label>
 					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="" placeholder="" id="roleName" name="roleName">
+						<input type="text" class="input-text" value="" placeholder="" id="roleNum" name="roleNum">
 					</div>
 				</div>
 				<div class="row cl">
@@ -55,6 +56,18 @@
 					</div>
 				</div>
 				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账号：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="account">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="password" class="input-text" value="" placeholder="" id="pwd">
+					</div>
+				</div>
+				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
 					<div class="formControls col-xs-8 col-sm-9">
 						<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
@@ -67,15 +80,9 @@
 					</div>
 				</div>
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>职位名称：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="" placeholder="" id="roleName" name="roleName">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-3">备注：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="" placeholder="" id="" name="">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>所属部门：</label>
+					<div class="formControls col-xs-8 col-sm-9" style="height: 200px;overflow-y: scroll;">
+						<ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
 					</div>
 				</div>
 				<div class="row cl">
@@ -92,6 +99,9 @@
 		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
 
 		<!--请在下方写此页面业务相关的脚本-->
+		<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+		<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.excheck-3.5.min.js"></script>
+		<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.exedit-3.5.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
@@ -116,6 +126,7 @@
 					}
 				});
 
+				/*验证*/
 				$("#form-admin-role-add").validate({
 					rules: {
 						roleName: {
@@ -131,6 +142,123 @@
 						parent.layer.close(index);
 					}
 				});
+
+				var setting = {
+					/*check: {
+						enable: true,
+						chkStyle: "checkbox",
+						chkboxType: {
+							"Y": "ps",
+							"N": "ps"
+						}
+					},*/
+					view: {
+						dblClickExpand: false,
+						showLine: false,
+						selectedMulti: false,
+					},
+					data: {
+						simpleData: {
+							enable: true,
+							idKey: "id",
+							pIdKey: "pId",
+							rootPId: ""
+						}
+					},
+					edit: {
+						enable: true
+					},
+					callback: {
+						beforeClick: function(treeId, treeNode) {
+							var zTree = $.fn.zTree.getZTreeObj("tree");
+							if(treeNode.isParent) {
+								zTree.expandNode(treeNode);
+								return false;
+							} else {
+								//demoIframe.attr("src",treeNode.file + ".html");
+								return true;
+							}
+						}
+
+					}
+				};
+
+				var zNodes = [{
+						id: 1,
+						pId: 0,
+						name: "森林公安结构树",
+						open: true
+					},
+					{
+						id: 11,
+						pId: 1,
+						name: "赤峰市公安局"
+					},
+					{
+						id: 109,
+						pId: 11,
+						name: "xxx局长"
+					},
+					{
+						id: 110,
+						pId: 11,
+						name: "xxx副局长"
+					},
+					{
+						id: 111,
+						pId: 11,
+						name: "政治处"
+					},
+					{
+						id: 112,
+						pId: 11,
+						name: "财务科"
+					},
+					{
+						id: 113,
+						pId: 11,
+						name: "法制科"
+					},
+					{
+						id: 114,
+						pId: 11,
+						name: "户政科"
+					},
+					{
+						id: 12,
+						pId: 1,
+						name: "赤峰市公安局2"
+					},
+					{
+						id: 119,
+						pId: 12,
+						name: "xxx局长"
+					},
+					{
+						id: 120,
+						pId: 12,
+						name: "xxx副局长"
+					},
+					{
+						id: 121,
+						pId: 12,
+						name: "刑侦"
+					},
+					{
+						id: 122,
+						pId: 12,
+						name: "治安"
+					},
+					{
+						id: 123,
+						pId: 12,
+						name: "户政"
+					}
+				];
+
+				var t = $("#treeDemo");
+				t = $.fn.zTree.init(t, setting, zNodes);
+				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
 		</script>
 	</body>
