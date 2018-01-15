@@ -1,106 +1,228 @@
-@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
 
-/* CSS 定制的公共样式 */
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+}
 
 * {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	letter-spacing: 1px;
 }
 
-a,
-img {
-	border: 0;
+.datagrid-cell {
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
 }
 
-body {
-	font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+input[type="text"],
+select {
+	height: 26px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: normal;
-	font-size: 12px;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-	transition: background-color 0.1s ease-in 0s, color 0.2s ease-in 0s;
-	-webkit-transition: background-color 0.1s ease-in 0s, color 0.2s ease-in 0s;
-	outline: none
-}
-
-a:hover {
-	color: #333;
-}
-
-.clear {
-	clear: both;
-	margin: 0;
-	padding: 0;
-	font-size: 0px;
-	line-height: 0px;
-	height: 0px;
-	overflow: hidden;
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-*html .clearfix {
-	zoom: 1;
-}
-
-*+html .clearfix {
-	zoom: 1;
-}
-
-
-/* 时间轴样式 */
-
-.course_nr {
-	height: 162px;
-	background: url(../images/ico9.gif) repeat-x center;
-}
-
-.course_nr li {
+.inputgrp {
 	float: left;
-	background: url(../images/ico10.gif) no-repeat center top;
-	padding-top: 30px;
-	width: 140px;
-	text-align: center;
+	width: 50%;
+	text-align: right;
+	margin: 10px 0 0;
+}
+
+.inputgrp>.inputgrp_first {
+	width: 25%;
+	float: left;
+	height: 28px;
+	line-height: 28px;
+}
+
+.inputgrp>.inputgrp_second {
+	float: left;
+	width: 50%;
+	padding-right: 10px;
+	line-height: 28px;
+	height: 28px;
+}
+
+.inputgrp_second>div {
+	width: 50%;
+	float: left;
+	padding: 0 10px;
 	position: relative;
-	margin-top: 65px;
 }
 
-.shiji {
+.inputgrp_second>div>span {
 	position: absolute;
+	left: -10px;
+	top: 0;
+	display: block;
+	width: 20px;
+	text-align: center;
+}
+
+.inputgrp>.inputgrp_second input[type="text"],
+.inputgrp>.inputgrp_second select {
 	width: 100%;
-	left: 0;
-	top: -40px;
-	display: none;
 }
 
-.shiji h1 {
-	height: 35px;
-	line-height: 35px;
-	color: #518dbb;
+.btngrp_r {
+	width: 100%;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.btngrp_r>a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #999999;
+	background-color: #e0e0e0;
+	border-radius: 3px;
+	box-shadow: inset 0 3px 3px rgba(255, 255, 255, 0.4), inset 0 -3px 3px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+iframe {
+	height: 115 % !important;
+}
+
+.body {
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 14px;
+}
+
+.poptable {
+	border-collapse: collapse;
+	width: 100%;
+	max-height: 100%;
+	table-layout: fixed;
+	white-space: nowrap;
+}
+
+.poptable td {
+	word-break: break-all;
+	word-wrap: break-word;
+	padding: 5px;
+}
+
+.poptable td .br {
+	height: 30px;
+}
+
+.poptable thead td {
+	text-align: center;
+	height: 30px;
+}
+
+.poptable tbody {
+	font-size: 14px;
+}
+
+.poptable .ul {
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.poptable tbody td:nth-child(2n+1) {
+	text-align: right;
+}
+
+.poptable tbody td:nth-child(2n) {
+	text-align: center;
+}
+
+.poptable tbody td.tt {
+	text-align: left !important;
+	font-size: 18px;
 	font-weight: bold;
-	background: url(../images/ico11.gif) no-repeat center top;
-	margin-bottom: 8px;
 }
 
-.shiji p {
-	line-height: 64px;
-	color: #999;
+
+/**/
+
+#page-table .panel-body {
+	width: 820px !important;
+}
+
+
+/*td{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}*/
+
+.datagrid-view {
+	height: 275px !important;
+}
+
+.window,
+.window-shadow {
+	top: 2px !important;
+}
+
+.ui-textarea {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 48px;
+	width: 540px;
+	text-align: left;
+}
+
+
+/**/
+
+.ui-container {
+	width: 100%;
+	background: #f4f4f4;
+	border-bottom: 1px solid #d0d0d0;
+	padding-bottom: 10px;
+}
+
+.ui-queryResult {
+	width: 100%;
+	height: 35px;
+	background: linear-gradient(to bottom, #eee, #ccc);
+	line-height: 35px;
+	text-indent: 15px;
+	border-bottom: 1px solid #d0d0d0;
+	font-weight: bold;
+}
+
+.ui-inputText {
+	height: 27px;
+	border: 1px solid #727171;
+	border-radius: 5px;
+}
+
+b {
+	color: red;
+	margin-left: 5px;
+}
+
+.w-120 {
+	width: 115px;
+}
+.w-260{
+	width: 260px !important;
+}
+.w-119{
+	width: 119px !important;
+}
+.selectVehicle option:nth-child(odd) {
+	background: #fff;
+}
+
+.selectVehicle option:nth-child(even) {
+	background: #EBF3F6;
 }

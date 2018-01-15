@@ -28,127 +28,87 @@
 		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
 		<style type="text/css">
-			.radio-box{
+			.radio-box {
 				padding-left: 0 !important;
 			}
 		</style>
-	
+
 	</head>
 
 	<body>
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
-
+				<h1 style="text-align: center;">赤峰市森林公安局公文编发审批单</h1>
+				<table id="printBtn" class="table table-border table-bordered">
+					<thead>
+						<tr>
+							<th width="10%">主办科室</th>
+							<th colspan="2">
+								<input type="text" placeholder="" value="xxxx科室" class="input-text radius size-M">
+							</th>
+							<th>拟稿人</th>
+							<td><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>核稿人</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+							<th>发文文号</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+						</tr>
+						<tr>
+							<th>题目</th>
+							<th colspan="6">
+								<input type="text" placeholder="" value="XXXXXXX关于工作开展" class="input-text radius size-M">
+							</th>
+						</tr>
+						<tr>
+							<th>发文日期</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+							<th>打印纸质份数</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+						</tr>
+						<tr>
+							<th>主送单位</th>
+							<th colspan="6">
+								<!--<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>-->
+							</th>
+						</tr>
+						<tr>
+							<th>抄送单位</th>
+							<th colspan="6">
+								<!--<textarea name="" cols="" rows="" class="textarea valid" placeholder="说点什么...最少输入10个字符" onkeyup="$.Huitextarealength(this,100)"></textarea>-->
+							</th>
+						</tr>
+						<tr>
+							<th>审核</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+							<th>签发</th>
+							<td colspan="2"><input type="text" placeholder="" value="" class="input-text radius size-M"></td>
+						</tr>
+					</tbody>
+				</table>
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>拟稿人：</label>
-					<div class="formControls col-xs-8 col-sm-2">
-						<input type="text" class="input-text" value="周xx" placeholder="" id="" name="">
-					</div>
-
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>公文标题：</label>
-					<div class="formControls col-xs-8 col-sm-2">
-						<input type="text" class="input-text" value="关于xxxx工作的落实情况" placeholder="" id="" name="">
-					</div>
-
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文号：</label>
-					<div class="formControls col-xs-8 col-sm-2">
-						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
-					</div>
-				</div>
-
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>附件：</label>
+					<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>附件：</label>
 					<div class="formControls col-xs-8 col-sm-4">
 						<span class="btn-upload form-group">
 							<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
 							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
 							<input type="file" multiple name="file-2" class="input-file">
 						</span>
-					</div>
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>存档期限：</label>
-					<div class="formControls col-xs-8 col-sm-4">
-						<div class="radio-box">
-							<input type="radio" id="radio-1" name="demo-radio1">
-							<label for="radio-1">10年</label>
-						</div>
-						<div class="radio-box">
-							<input type="radio" id="radio-1" name="demo-radio1">
-							<label for="radio-1">30年</label>
-						</div>
-						<div class="radio-box">
-							<input type="radio" id="radio-1" name="demo-radio1">
-							<label for="radio-1">永久</label>
-						</div>
-					</div>
-				</div>
-				<!--<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>公文标题：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="关于xxxx工作的落实情况" placeholder="" id="" name="">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文号：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>附件：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<span class="btn-upload form-group">
-							<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
-							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
-							<input type="file" multiple name="file-2" class="input-file">
-						</span>
-					</div>
-				</div>-->
-				<!--<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>请选择文件类型：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						<span class="select-box inline">
-						<select name="" class="select">
-							<option value="0">请选择文件类型</option>
-							<option value="1" selected>上行文</option>
-							<option value="2">下行文</option>
-						</select>
-					</span>
-					</div>
-				</div>-->
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>详情：</label>
-					<div class="formControls col-xs-8 col-sm-10">
-						<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
-					</div>
-				</div>
-
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2">经办意见：</label>
-					<div class="formControls col-xs-8 col-sm-10">
-						<textarea name="" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">
-								工作已落实到位...
-						</textarea>
-						<!--<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>-->
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">请选择节点办理人：</label>
-					<div class="formControls col-xs-8 col-sm-10" style="height: 220px; overflow-y: scroll;">
+					<div class="formControls col-xs-8 col-sm-10" style="height: 200px; overflow-y: scroll;">
 						<ul id="treeDemo" class="ztree"></ul>
 					</div>
 				</div>
-				<!--<div class="row cl">
+				<div class="row cl">
 					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
 						<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
-					</div>
-				</div>-->
-				<div class="row cl">
-					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-						<!--<button onclick="product_add('核稿','handle-documents-add22.html')" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>-->
-						<!--<input class="btn btn-primary radius" type="button" value="保存并提交审核" onClick="product_edit('保存并提交审核','handle-documents-add22.html','10001')">-->
-						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-						<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+						<input class="btn btn-success radius" type="button" value="打印" onclick="btnPrintClick()">
 					</div>
 				</div>
 			</form>
@@ -167,9 +127,11 @@
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
 		<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js">
-		</script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
+		<script type="text/javascript" src="js/jquery.jqprint-0.3.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript">
 			var ue = UE.getEditor('editor');
 
@@ -177,10 +139,20 @@
 				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
 			});
 
-			$(".textarea").Huitextarealength({
+			/*打印*/
+			function btnPrintClick() {
+				$("#printBtn").jqprint({
+					debug: false, //如果是true则可以显示iframe查看效果（iframe默认高和宽都很小，可以再源码中调大），默认是false  
+					importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）  
+					printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。  
+					operaSupport: false //表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true  
+				});
+			}
+
+			/*$(".textarea").Huitextarealength({
 				minlength: 0,
 				maxlength: 200
-			});
+			});*/
 
 			$('.skin-minimal input').iCheck({
 				checkboxClass: 'icheckbox-blue',
