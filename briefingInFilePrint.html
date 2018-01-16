@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>赤峰市森林公安网上办公系统</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+
+		<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+		<style>
+			@page {
+				size: A4
+			}
+		</style>
+	</head>
+
+	<body class="A4">
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-1">
+				<input onclick="printTable();" id="btnPrint" class="btn btn-primary radius" type="button" value="打印">
+			</div>
+		</div>
+		<section id="printTableText" class="sheet padding-10mm" style="margin: 0 auto;">
+			<article>
+				<h3 style="text-align: center;margin-bottom: 10px;">赤峰市森林公安局文件传办单</h3>
+				<table class="table table-border table-bordered">
+					<thead>
+						<tr class="text-c">
+							<th width="20%" height="60px">来文单位</th>
+							<th colspan="2">
+								<span>xxxx科室</span>
+							</th>
+							<th colspan="2">来文文号</th>
+							<td>
+								<span>20171120</span>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="text-c">
+							<th width="20%" height="60px">存储年限</th>
+							<th colspan="2">
+								<span>永久</span>
+							</th>
+							<th colspan="2">份数</th>
+							<td>
+								<span>3</span>
+							</td>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="60px">题目</th>
+							<th colspan="6">
+								<span>XXXXXXX关于工作开展</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="60px">收文日期</th>
+							<td colspan="2">
+								<span>2018-1-16</span>
+							</td>
+							<th>页数</th>
+							<td colspan="2">
+								<span>3</span>
+							</td>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">拟办意见</th>
+							<th colspan="6">
+								<span>已阅</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">局长批示</th>
+							<th colspan="6">
+								<span>已阅</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">分管领导批示</th>
+							<th colspan="6">
+								<span>已阅</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">科室负责人意见</th>
+							<th colspan="6">
+								<span>已阅</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">办理情况</th>
+							<th colspan="6">
+								<span>已阅</span>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+
+		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+		<script language="javascript" src="js/jquery.jqprint-0.3.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script language="javascript">
+			function printTable() {
+				$("#printTableText").jqprint();
+			}
+		</script>
+	</body>
+
+</html>

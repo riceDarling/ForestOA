@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>赤峰市森林公安局网上办公系统</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+
+		<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+		<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+		<style>
+			@page {
+				size: A4
+			}
+		</style>
+	</head>
+
+	<body class="A4">
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-1">
+				<input onclick="printTable();" id="btnPrint" class="btn btn-primary radius" type="button" value="打印">
+			</div>
+		</div>
+		<section id="printTableText" class="sheet padding-10mm" style="margin: 0 auto;">
+			<article>
+				<h3 style="text-align: center;margin-bottom: 10px;">赤峰市森林公安局简报编发审批单</h3>
+				<table id="printBtn" class="table table-border table-bordered">
+					<thead>
+						<tr class="text-c">
+							<th width="20%" height="60px">主办科室</th>
+							<th colspan="2">
+								<span>xxxx科室</span>
+							</th>
+							<th>拟稿人</th>
+							<td>
+								<span>王xx</span>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="text-c">
+							<th width="20%" height="60px">核稿人</th>
+							<td colspan="2">
+								<span>张xx</span>
+							</td>
+							<th>简报号</th>
+							<td colspan="2">
+								<span>20180116</span>
+							</td>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="60px">题目</th>
+							<th colspan="6">
+								<span>XXXXXXX关于工作开展</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="60px">发文日期</th>
+							<td colspan="2">
+								<span>2018-1-16</span>
+							</td>
+							<th>打印纸质份数</th>
+							<td colspan="2">
+								<span>3</span>
+							</td>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">主送单位</th>
+							<th colspan="6">
+								<span>xxxx公安局</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">抄送单位</th>
+							<th colspan="6">
+								<span>xxx公安局</span>
+							</th>
+						</tr>
+						<tr class="text-c">
+							<th width="20%" height="120px">审核</th>
+							<td colspan="2">
+								<span>刘xx</span><br/>
+								<span style="position: relative; right: -42px;bottom: -32px;">2017年12月29日</span>
+							</td>
+							<th>签发</th>
+							<td colspan="2">
+								<span>李xx</span><br/>
+								<span style="position: relative; right: -42px;bottom: -32px;">2017年12月29日</span>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr class="text-c">
+							<th colspan="6" style="text-align: center;">
+								<span>预投栏目</span>
+							
+								<ul style="margin-top: 5px;margin-left: 60px;">
+									<li style="width: 25%;float: left;text-align: left;">
+										<ul>
+											<li>
+												<input type="checkbox" id="checkbox-1" class="valid">
+												<label for="checkbox-1">工作要闻</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-2">
+												<label for="checkbox-2">队伍建设</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-3">
+												<label for="checkbox-3">刑侦快讯</label>
+											</li>
+										</ul>
+									</li>
+									<li style="width: 25%;float: left;text-align: left;">
+										<ul>
+											<li>
+												<input type="checkbox" id="checkbox-4">
+												<label for="checkbox-4">法制园地</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-1">
+												<label for="checkbox-1">基础建设</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-2">
+												<label for="checkbox-2">荣誉之窗</label>
+											</li>
+										</ul>
+									</li>
+									<li style="width: 25%;float: left;text-align: left;">
+										<ul>
+											<li>
+												<input type="checkbox" id="checkbox-3">
+												<label for="checkbox-3">专项行动</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-4">
+												<label for="checkbox-4">警苑文化</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-1">
+												<label for="checkbox-1">执法规范建设</label>
+											</li>
+										</ul>
+									</li>
+									<li style="width: 25%;float: left;text-align: left;">
+										<ul>
+											<li>
+												<input type="checkbox" id="checkbox-2">
+												<label for="checkbox-2">信息化建设</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-3">
+												<label for="checkbox-3">视频宣传</label>
+											</li>
+											<li>
+												<input type="checkbox" id="checkbox-4">
+												<label for="checkbox-4">专题专栏</label>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</th>
+						</tr>
+					</tfoot>
+				</table>
+			</article>
+		</section>
+
+		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+		<script language="javascript" src="js/jquery.jqprint-0.3.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script language="javascript">
+			function printTable() {
+				$("#printTableText").jqprint();
+			}
+		</script>
+	</body>
+
+</html>

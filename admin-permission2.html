@@ -20,7 +20,9 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-		<title></title>
+		<title>赤峰市森林公安局网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 	</head>
 
 	<body>
@@ -31,7 +33,7 @@
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
 				<span class="l">
 			<a href="javascript:;" onclick="product_add('添加权限节点','system-category-add.html')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加权限节点</a></span>
-				<!--<span class="r">共有数据：<strong>54</strong> 条</span>-->
+			<!--<span class="r">共有数据：<strong>54</strong> 条</span>-->
 			</div>
 			<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 				<thead>
@@ -65,48 +67,6 @@
 		<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 		<script type="text/javascript">
 			$('.table-sort').dataTable({
-				"ajax": {
-					url: "http://192.168.0.154:8080/forestoa/role/findByPage",
-					dataSrc: function(result) {
-						//这里result和上面jquery的ajax的代码类似，也是可以得到data.json的数据，但是这样的格式，Datatables不能直接使用，这时候需要在这里处理一下
-						//直接返回Datatables需要的那部分数据即可，看到这里，大家或许又懂了些什么看到了他的强大和灵活
-						return result.data.list;
-					}
-				},
-				"columns": [{
-						"data": "rId"
-					},
-					{
-						"data": "rName"
-					},
-					{
-						"data": "menus",
-						//渲染
-						"render": function(data, type, row, meta) {
-							//type 的值  dispaly sort filter
-							//代表，是显示类型的时候判断值的长度是否超过8，如果是则截取
-							//这里只处理了类型是显示的，过滤和排序返回原始数据
-							var html = '';
-							if(data.length > 0) {
-								for(var i = 0; i < data.length; i++) {
-									html += data[i].mName + '&nbsp;&nbsp;';
-								}
-							}
-							return html;
-						}
-					},
-					{
-						"data": "rId",
-						//渲染
-						"render": function(data, type, row, meta) {
-							var html = '';
-							html += '<a title="编辑" href="javascript:;" onclick="product_edit(\'编辑\',\'system-category-add.html\',\'1\',\'\',' + data + ')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>'
-							html += '<a title="删除" href="javascript:;" onclick="product_del(this,' + data + ')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>';
-							return html;
-						}
-					},
-				],
-
 				"aaSorting": [
 					[1, "desc"]
 				], //默认第几个排序
@@ -145,18 +105,12 @@
 				var index = layer.open({
 					type: 2,
 					title: title,
-					content: url + '?rid=' + id,
-					success: function(layero, index) {
-						//打开新的页面之后，把当前要编辑的角色对象传到layui-layer-title的自定义属性rId中，方便编辑页面使用
-						$(".layui-layer-title").attr("rId",id);
-					}
+					content: url
 				});
 				layer.full(index);
-				console.log(id);
 			};
 			/*删除、撤销*/
 			function product_del(obj, id) {
-				alert(id);
 				layer.confirm('确认要撤销吗？', function(index) {
 					$.ajax({
 						type: 'POST',
