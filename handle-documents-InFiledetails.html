@@ -32,41 +32,91 @@
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
 				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2">拟稿人：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						李xx
+					<label class="form-label col-xs-4 col-sm-2">来文单位：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="xxxxxx科室" placeholder="" id="" name="">-->
+							<span>xxxxxx科室</span>
 					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2">公文标题：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						关于xxxx工作开展
+
+					<label class="form-label col-xs-4 col-sm-2">来文文号：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="王xx" placeholder="" id="" name="">-->
+							<span>王xx</span>
 					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-4 col-sm-2">文号：</label>
-					<div class="formControls col-xs-8 col-sm-9">
-						20171112
+
+					<label class="form-label col-xs-4 col-sm-2">份数：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="刘xx" placeholder="" id="" name="">-->
+							<span>刘xx</span>
+					</div>
+
+					<label class="form-label col-xs-4 col-sm-2">页数：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">-->
+							<span>20171111</span>
+						
+					</div>
+
+					<label class="form-label col-xs-4 col-sm-2">存储年限：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<div class="radio-box" style="padding-right: 0;padding-left: 0;">
+							<input type="radio" id="radio-1" name="demo-radio1" checked>
+							<label for="radio-1">10年</label>
+						</div>
+						<div class="radio-box" style="padding-right: 0;padding-left: 0;">
+							<input type="radio" id="radio-1" name="demo-radio1">
+							<label for="radio-1">30年</label>
+						</div>
+						<div class="radio-box" style="padding-right: 0;padding-left: 0;">
+							<input type="radio" id="radio-1" name="demo-radio1">
+							<label for="radio-1">永久</label>
+						</div>
+					</div>
+
+					<label class="form-label col-xs-4 col-sm-2">顺序号：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">-->
+							<span>20171115</span>
+					</div>
+
+					<label class="form-label col-xs-4 col-sm-2">题目：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" class="input-text" value="关于xxxx公告的开展" placeholder="" id="" name="">-->
+						<span>关于xxxx公告的开展</span>
+					</div>
+					<label class="form-label col-xs-4 col-sm-2">收文日期：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<!--<input type="text" onfocus="WdatePicker()" id="logmin" class="input-text radius size-M Wdate">-->
+							<span>2018-1-16</span>
+					</div>
+					<label class="form-label col-xs-4 col-sm-2">附件：</label>
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
+						<span class="btn-upload form-group">
+							<!--<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
+							<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 上传附件</a>
+							<input type="file" multiple name="file-2" class="input-file">-->
+							<a href="javascript:;">关于xxxxx的附件</a>
+						</span>
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">详情：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-10">
 						<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">经办意见：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-10">
 						<textarea name="" cols="" rows="" class="textarea" disabled="disabled" placeholder="说点什么...最少输入10个字符" style="text-indent:-230px;" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">
-							望领导支持.....
+							已阅
 						</textarea>
 						<!--<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>-->
 					</div>
 				</div>
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-2">历史节点：</label>
-					<div class="formControls col-xs-8 col-sm-9">
+					<div class="formControls col-xs-8 col-sm-10">
 						<table class="table table-border table-bg table-bordered">
 							<thead>
 								<tr>
@@ -78,22 +128,22 @@
 							</thead>
 							<tbody>
 								<tr class="active">
-									<th>李四</th>
+									<th>李xx</th>
 									<td>同意</td>
-									<td>予以通过</td>
-									<td><a href="javascript:;"  onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td><span data-toggle="tooltip" data-placement="top" title="望领导尽快批阅...">望领导尽快批阅...</span></td>
+									<td><a href="javascript:;"  onclick="product_show('查看','handle-documents-InFiledetails.html','10001')">查看详情</a></td>
 								</tr>
 								<tr class="active">
-									<th>王五</th>
+									<th>王xx</th>
 									<td>同意</td>
-									<td>予以通过....</td>
-									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td><span data-toggle="tooltip" data-placement="top" title="关于此项决策,还有待于进一步深入...">予以通过</span></td>
+									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-InFiledetails.html','10001')">查看详情</a></td>
 								</tr>
 								<tr class="active">
-									<th>赵六</th>
+									<th>赵xx</th>
 									<td>驳回</td>
 									<td></td>
-									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-details.html','10001')">查看详情</a></td>
+									<td><a href="javascript:;" onclick="product_show('查看','handle-documents-InFiledetails.html','10001')">查看详情</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -132,6 +182,9 @@
 				minlength: 0,
 				maxlength: 200
 			});
+			
+			/*tooltip*/
+			$("[data-toggle='tooltip']").tooltip()
 			
 			
 			/*添加*/

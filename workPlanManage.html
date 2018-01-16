@@ -69,7 +69,7 @@
 											<td>李四</td>
 											<td>2017-8-9</td>
 											<td class="f-14 td-manage">
-												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-workplan-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
+												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-workplan-detail.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','statistics-workplan-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 											</td>
@@ -80,7 +80,7 @@
 											<td>张三</td>
 											<td>2017-8-9</td>
 											<td class="f-14 td-manage">
-												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-workplan-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
+												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-workplan-detail.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','statistics-workplan-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 											</td>
@@ -117,7 +117,7 @@
 											<td>会议</td>
 											<td class="f-14 td-manage">
 												<!--<a style="text-decoration:none" onClick="this_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe6e4;</i></a>-->
-												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-notice-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
+												<a style="text-decoration:none" class="ml-5" onClick="product_details('详细','statistics-notice-detail.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','statistics-notice-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 											</td>
@@ -129,7 +129,7 @@
 											<td>集体活动</td>
 											<td class="f-14 td-manage">
 												<!--<a style="text-decoration:none" onClick="this_start(this,'10001')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe6e6;</i></a>-->
-												<a style="text-decoration:none" class="ml-5" onClick="product_show('详细','statistics-notice-see.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
+												<a style="text-decoration:none" class="ml-5" onClick="product_show('详细','statistics-notice-detail.html','10001')" href="javascript:;" title="详细"><i class="Hui-iconfont">&#xe623;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="product_edit('编辑','statistics-notice-edit.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 												<a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 											</td>
@@ -217,6 +217,16 @@
 
 			/*查看*/
 			function product_show(title, url, id) {
+				var index = layer.open({
+					type: 2,
+					title: title,
+					content: url
+				});
+				layer.full(index);
+			}
+			
+			/*查看*/
+			function product_details(title, url, id) {
 				var index = layer.open({
 					type: 2,
 					title: title,
