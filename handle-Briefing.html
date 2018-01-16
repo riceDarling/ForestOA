@@ -20,25 +20,17 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-		<title></title>
+		<title>赤峰市森林公安网上办公系统</title>
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
 	</head>
 
 	<body>
-		<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 公文办理 <span class="c-gray en">&gt;</span> 简报办理
+		<!--<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 公文办理 <span class="c-gray en">&gt;</span> 简报办理
 			<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
-		</nav>
+		</nav>-->
 		<div class="page-container">
-			<!--<a class="btn btn-primary radius" data-title="发文" onclick="product_add('发文','handle-Briefing-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 发文</a>
-			<a class="btn btn-primary radius" data-title="收文" onclick="product_add('发文','handle-Briefing-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 收文</a>-->
 			<div class="text-c">
-				<!--<span class="select-box inline">
-					<select name="" class="select">
-						<option value="0">请选择办理节点</option>
-						<option value="1">审核</option>
-						<option value="2">签发</option>
-						<option value="2">签章</option>
-					</select>
-				</span>-->
 				 日期范围：
 				<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;"> -
 				<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
@@ -46,56 +38,10 @@
 				<button name="" id="" class="btn btn-success" type="button"><i class="Hui-iconfont">&#xe665;</i> 查询</button>
 			</div>
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
-				<!--<span class="l">
-					<a class="btn btn-primary radius" data-title="发起" onclick="product_add('添加','handle-Briefing-add.html')" href="javascript:;">
-						<i class="Hui-iconfont">&#xe600;</i> 发起
-					</a>
-				</span>-->
 				<a class="btn btn-primary radius" data-title="发文" onclick="product_add('发文','handle-Briefing-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 发文</a>
 			<a class="btn btn-primary radius" data-title="收文" onclick="product_add('发文','handle-Briefing-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 收文</a>
 			</div>
 			<div class="mt-20">
-				<!--<table tablename="thistable" class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
-					<thead>
-						<tr class="text-c">
-							<th width="120">标题</th>
-							<th width="40">拟稿人</th>
-							<th width="60">文号</th>
-							<th width="80">发起时间</th>
-							<th width="40">节点办理人</th>
-							<th width="40">状态</th>
-							<th width="120">操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="text-c">
-							<td>xxxxxx标题 </td>
-							<td>李xxx</td>
-							<td>20181121</td>
-							<td>2014-6-11 11:11:42</td>
-							<td>张科长</td>
-							<td class="td-status"><span class="label label-success radius">办理中</span></td>
-							<td class="f-14 td-manage">
-								<input class="btn btn-primary radius" type="button" value="同意" onClick="product_edit('同意','handle-Briefing-examined.html','10001')">
-								<input class="btn radius btn-warning" type="button" value="驳回" onClick="product_edit('驳回','handle-Briefing-reject.html','10001')">
-								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_edit('查看详情','handle-Briefing-details.html','10001')">
-							</td>
-						</tr>
-						<tr class="text-c">
-							<td>xxxx标题 </td>
-							<td>张局长</td>
-							<td>20181115</td>
-							<td>2014-6-11 11:11:42</td>
-							<td>刘xx</td>
-							<td class="td-status"><span class="label label-success radius">办理中</span></td>
-							<td class="f-14 td-manage">
-								<input class="btn btn-primary radius" type="button" value="提交" onClick="product_edit('提交','handle-Briefing-add.html','10001')">
-								<input class="btn btn-warning radius" type="button" value="撤销" onClick="product_del(this,'10001')">
-								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_edit('查看详情','handle-Briefing-details.html','10001')">
-							</td>
-						</tr>
-					</tbody>
-				</table>-->
 				<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 					<thead>
 						<tr class="text-c">
@@ -122,8 +68,6 @@
 								<input class="btn btn-primary radius" type="button" value="批示" onClick="product_edit('批示','personnel-manage-examined22.html','10001')">
 								<input class="btn radius btn-warning" type="button" value="驳回" onClick="product_edit('驳回','personnel-manage-reject.html','10001')">
 								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_show('查看详情','handle-documents-details.html','10001')">
-								<!--<input class="btn btn-primary radius" type="button" value="流程节点" onClick="product_show('流程节点','process-node.html','10001')">-->
-								<!--<input id="btnPrint" class="btn btn-primary radius" type="button" value="打印" onClick="product_show('打印','handle-documents-add2.html')">-->
 							</td>
 						</tr>
 						<tr class="text-c">
@@ -135,8 +79,6 @@
 							<td></td>
 							<td class="td-status"><span class="label label-success radius">未办理</span></td>
 							<td class="f-14 td-manage">
-								<!--<a style="text-decoration:none" onClick="this_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe6e4;</i></a>-->
-								<!--<a style="text-decoration:none" class="ml-5" onClick="this_edit('编辑','equipment-area-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>-->
 								<input class="btn btn-primary radius" type="button" value="提交" onClick="product_edit('提交','handle-documents-add.html','10001')">
 								<input class="btn btn-warning radius" type="button" value="撤销" onClick="product_del(this,'10001')">
 								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_edit('查看详情','handle-documents-details.html','10001')">
@@ -151,10 +93,7 @@
 							<td></td>
 							<td class="td-status"><span class="label label-success radius">办理中</span></td>
 							<td class="f-14 td-manage">
-								<!--<a style="text-decoration:none" onClick="this_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe6e4;</i></a>-->
-								<!--<a style="text-decoration:none" class="ml-5" onClick="this_edit('编辑','equipment-area-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>-->
 								<input class="btn btn-primary radius" type="button" value="校核" onClick="product_edit('校核','handle-documents-add.html','10001')">
-								<!--<input class="btn btn-warning radius" type="button" value="撤销" onClick="product_del(this,'10001')">-->
 								<input class="btn radius btn-warning" type="button" value="驳回" onClick="product_edit('驳回','personnel-manage-reject.html','10001')">
 								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_edit('查看详情','handle-documents-details.html','10001')">
 							</td>
@@ -168,8 +107,6 @@
 							<td>XXX副局长</td>
 							<td class="td-status"><span class="label label-success radius">办理中</span></td>
 							<td class="f-14 td-manage">
-								<!--<a style="text-decoration:none" onClick="this_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe6e4;</i></a>-->
-								<!--<a style="text-decoration:none" class="ml-5" onClick="this_edit('编辑','equipment-area-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="this_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>-->
 								<input class="btn btn-primary radius" type="button" value="批示并签发" onClick="product_edit('批示并签发','personnel-manage-examined.html	','10001')">
 								<input class="btn btn-primary radius" type="button" value="查看详情" onClick="product_edit('查看详情','handle-documents-details.html','10001')">
 							</td>
