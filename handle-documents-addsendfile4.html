@@ -29,17 +29,155 @@
 		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
 		<style type="text/css">
-			.radio-box{
+			.radio-box {
 				padding-left: 0 !important;
 			}
+			
+			.node {
+				margin-left: 10px;
+				width: 110px;
+				height: 80px;
+				border: 1px solid #ccc;
+				text-align: center;
+				cursor: pointer;
+				border-radius: 5px;
+				background: #ccc;
+			}
+			
+			.mt-10 {
+				margin-top: 10px;
+			}
+			
+			.mt-25 {
+				margin-top: 35px;
+			}
+			
+			.ml-75 {
+				margin-left: 75px;
+			}
+			
+			.active {
+				color: #000;
+				border: 5px solid green;
+				background: none;
+			}
+			
+			.return {
+				color: red;
+				border: 5px solid red;
+				background: none;
+			}
+			
+			.no {
+				border: 1px solid #000000;
+				background: none;
+			}
+			
+			@media screen and (min-width:1200px) {
+				.node {
+					width: 110px !important;
+					height: 40px !important;
+					font-size: 12px !important;
+					margin-left: -10px !important;
+				}
+				.node:hover {
+					font-size: 14px !important;
+				}
+				img {
+					width: 50px !important;
+				}
+				.mt-25 {
+					margin-top: 40px !important;
+				}
+				.ml-75 {
+					margin-left: 75px !important;
+				}
+			}
+			
+			@media screen and (min-width: 960px) and (max-width: 1199px) {
+				.node {
+					width: 100px !important;
+					height: 40px !important;
+					font-size: 12px !important;
+					margin-left: -10px !important;
+				}
+				img {
+					width: 30px !important;
+				}
+				.mt-25 {
+					margin-top: 25px !important;
+				}
+				.ml-75 {
+					margin-left: 0px !important;
+				}
+			}
+			
+			@media screen and (min-width: 768px) and (max-width: 959px) {
+				.node {
+					width: 100px !important;
+					height: 40px !important;
+					font-size: 8px !important;
+					margin-left: -15px !important;
+				}
+				img {
+					width: 30px !important;
+				}
+				.mt-25 {
+					margin-top: 25px !important;
+				}
+				.ml-75 {
+					margin-left: 0px !important;
+				}
+			}
 		</style>
-	
+
 	</head>
 
 	<body>
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
-
+				<a href="#" style="margin-left: 52px;" class="more" onclick="return process(this)">审批流程</a>
+				<div id="divProcess" class="row cl ml-75" style="margin-top: 0;height: 0px; overflow: hidden;">
+					<div class="formControls col-xs-8 col-sm-2 node" style="margin-left: 0 !important;">
+						<p class="mt-10"><span>拟稿</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 18px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node active">
+						<p style="margin-top: 6px;"><span>核稿</span></p>
+						<!--<p><span>办理人:赵xx</span></p>-->
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 18px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node no">
+						<p class="mt-10"><span>审核</span></p>
+						<!--<p><span>办理人:赵xx</span></p>-->
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 18px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node no">
+						<p class="mt-10"><span>校核</span></p>
+						<!--<p><span>办理人:赵xx</span></p>-->
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 18px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node no">
+						<p class="mt-10"><span>盖章</span></p>
+						<!--<p><span>办理人:赵xx</span></p>-->
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 18px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node no">
+						<p class="mt-10"><span>发文</span></p>
+						<!--<p><span>办理人:赵xx</span></p>-->
+					</div>
+				</div>
 				<div id="dvBrand" class="row cl" style="height: 36px; overflow: hidden;">
 					<label class="form-label col-xs-4 col-sm-1"><a href="#" class="more" onclick="return More(this)">更多</a></label>
 					<label class="form-label col-xs-4 col-sm-1">主办科室：</label>
@@ -56,18 +194,18 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="刘xx" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">发文文号：</label>
-					<div class="formControls col-xs-8 col-sm-2"style="margin-top: 5px;">
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">题目：</label>
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="关于xxxx公告的开展" placeholder="" id="" name="">
 					</div>
 					<label class="form-label col-xs-4 col-sm-2">发文日期：</label>
-					<div class="formControls col-xs-8 col-sm-2"style="margin-top: 5px;">
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="2017-11-15" placeholder="" id="" name="">
 					</div>
 					<label class="form-label col-xs-4 col-sm-2">打印纸质份数：</label>
@@ -82,7 +220,7 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="旗县" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">审核：</label>
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="刘xxx" placeholder="" id="" name="">
@@ -91,7 +229,7 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="张xxx" placeholder="" id="" name="">
 					</div>
-				<!--</div>
+					<!--</div>
 
 				<div class="row cl">-->
 					<label class="form-label col-xs-4 col-sm-2">附件：</label>
@@ -103,7 +241,7 @@
 						</span>
 					</div>
 				</div>
-				
+
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-1">详情：</label>
 					<div class="formControls col-xs-8 col-sm-11">
@@ -129,16 +267,10 @@
 						<ul id="secondarytree" class="ztree"></ul>
 					</div>
 				</div>
-				<!--<div class="row cl">
-					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-						<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
-					</div>
-				</div>-->
 				<div class="row cl">
 					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-1">
-						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交核稿</button>
-						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-						<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 提交</button>
 					</div>
 				</div>
 			</form>
@@ -157,15 +289,21 @@
 		<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
 		<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js">
-		</script>
+		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"></script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
 		<script type="text/javascript">
 			var ue = UE.getEditor('editor');
 
 			ue.ready(function() {
 				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
 			});
+
+			$(".textarea").Huitextarealength({
+				minlength: 0,
+				maxlength: 200
+			});
+
 			/*更多*/
 			function More(a) {
 				var oDIv = document.getElementById('dvBrand'),
@@ -173,13 +311,18 @@
 				oDIv.style.height = exp ? 'auto' : '36px';
 				a.innerHTML = exp ? '收缩' : '更多'
 				return false;
-			}
+			};
 			
-			$(".textarea").Huitextarealength({
-				minlength: 0,
-				maxlength: 200
-			});
-
+			/*更多-审批流程*/
+			function process(el) {
+				var oDIv = document.getElementById('divProcess'),
+					exp = el.innerHTML == '审批流程';
+				oDIv.style.height = exp ? 'auto' : '0px';
+				el.innerHTML = exp ? '收缩' : '审批流程'
+				return false;
+			};
+			
+			
 			$('.skin-minimal input').iCheck({
 				checkboxClass: 'icheckbox-blue',
 				radioClass: 'iradio-blue',
@@ -319,8 +462,7 @@
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
-			
-			
+
 			var setting = {
 				check: {
 					enable: true,
@@ -435,8 +577,7 @@
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
-			
-			
+
 			/*查看*/
 			function product_show(title, url, id) {
 				var index = layer.open({

@@ -74,6 +74,12 @@
 			.tiles .tile .tile-object>.name {
 				margin-left: 30px;
 			}
+			
+			td {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
 		</style>
 	</head>
 
@@ -93,9 +99,10 @@
 			<div style="width:100%;height:100%;position:relative;">
 				<div id="listBtn" style="position:absolute;width:100%;height:100%;">
 					<div class="btngrp">
-						<a href="fileManage.html">
+							<a href="fileManage.html">
 							<div class="target-button">
-								<div>
+								<div style="position: relative;">
+									<span class="badge badge-danger" style="position: absolute; top: 0px;left: 52px;">15</span>
 									<img src="images/index/8.png" width="70px" height="70px" />
 								</div>
 								<div class="mt-10">
@@ -179,7 +186,7 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<!--<div id="messageBoardContainer">
 			<div id="messageBoard">
 				<div class="wrap">
@@ -188,97 +195,75 @@
 						<a href="javascript:if(g_fnQuirkyPopupClose){g_fnQuirkyPopupClose()};" title="关闭"></a>
 					</h2>
 					<div class="content" style="height: 240px;overflow-y: scroll;">
-						<table class="table table-border table-bg table-bordered">
+						<table id="" class="table table-border table-bg table-bordered">
 							<thead>
 								<tr>
-									<th>待办</th>
-									<th>描述</th>
+									<th>类型</th>
+									<th>标题</th>
 									<th>时间</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr class="indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="fileManage.html">关于赤峰市森林公安局网上办公系统开发工作的逐步进行</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="success">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+								<tr class="success indent" style="text-indent: 0;">
+									<th>简报</th>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="warning">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+								<tr class="warning indent" style="text-indent: 0;">
+									<th>简报</th>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="danger">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+								<tr class="danger indent" style="text-indent: 0;">
+									<th>公文</th>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								
-								<tr>
+
+								<tr class="indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="success">
+								<tr class="success indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="warning">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+								<tr class="warning indent" style="text-indent: 0;">
+									<th>公文</th>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="danger">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+								<tr class="danger indent" style="text-indent: 0;">
+									<th>简报</th>
+									<td><span><a href="fileManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								
-								<tr>
+
+								<tr class="indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="workPlanManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="success">
+								<tr class="success indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="workPlanManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="warning">
+								<tr class="warning indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="workPlanManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
-								<tr class="danger">
+								<tr class="danger indent" style="text-indent: 0;">
 									<th>通知通告</th>
-									<td>关于xxxx工作</td>
-									<td>2017-1-15</td>
-								</tr>
-								
-								
-								<tr>
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
-									<td>2017-1-15</td>
-								</tr>
-								<tr class="success">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
-									<td>2017-1-15</td>
-								</tr>
-								<tr class="warning">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
-									<td>2017-1-15</td>
-								</tr>
-								<tr class="danger">
-									<th>通知通告</th>
-									<td>关于xxxx工作</td>
+									<td><span><a href="workPlanManage.html">关于xxxx工作</a></span></td>
 									<td>2017-1-15</td>
 								</tr>
 							</tbody>
@@ -289,17 +274,16 @@
 				<div class="bg"></div>
 			</div>
 		</div>
-		<a href="javascript:;" id="quirkyPopupShowBtn" style="display:none;"></a>
-		-->
+		<a href="javascript:;" id="quirkyPopupShowBtn" style="display:none;"></a>-->
+
 		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
 		<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
 		<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 		<script type="text/javascript" src="js/column.js"></script>
-		<!--<script type="text/javascript" src="js/popup.js"></script>-->
+		<script type="text/javascript" src="js/popup.js"></script>
 		<script type="text/javascript">
-			
 			/*设备、车辆管理提示*/
 			$('.otherManageBtn').click(function() {
 				layer.confirm('功能正在完善中...', {

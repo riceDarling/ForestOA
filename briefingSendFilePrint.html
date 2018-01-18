@@ -21,11 +21,7 @@
 	</head>
 
 	<body class="A4">
-		<div class="row cl">
-			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-1">
-				<input onclick="printTable();" id="btnPrint" class="btn btn-primary radius" type="button" value="打印">
-			</div>
-		</div>
+		
 		<section id="printTableText" class="sheet padding-10mm" style="margin: 0 auto;">
 			<article>
 				<h3 style="text-align: center;margin-bottom: 10px;">赤峰市森林公安局简报编发审批单</h3>
@@ -171,7 +167,11 @@
 				</table>
 			</article>
 		</section>
-
+		<div class="row cl" style="margin-right: 0;margin-top: 5px;margin-bottom: 5px;">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input onclick="printTable();" id="btnPrint" class="btn btn-primary radius" type="button" value="打印">
+			</div>
+		</div>
 		<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 		<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>

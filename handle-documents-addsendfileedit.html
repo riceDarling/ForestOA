@@ -28,18 +28,59 @@
 
 		<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="lib/zTree/v3/css/bootstrapStyle/bootstrapStyle.css" type="text/css">
+		<link rel="stylesheet" href="css/handle-documents.css" />
 		<style type="text/css">
-			.radio-box{
+			.radio-box {
 				padding-left: 0 !important;
 			}
 		</style>
-	
+
 	</head>
 
 	<body>
 		<div class="page-container">
 			<form action="" method="post" class="form form-horizontal" id="form-article-add">
-
+				<div class="row cl ml-75">
+					<div class="formControls col-xs-8 col-sm-2 node">
+						<p style="margin-top: 10px;"><span>拟稿</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 35px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node active">
+						<p style="margin-top: 10px;"><span>核稿</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 35px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node">
+						<p style="margin-top: 10px;"><span>审核</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 35px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node">
+						<p style="margin-top: 10px;"><span>校核</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 35px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node">
+						<p style="margin-top: 10px;"><span>盖章</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+					<div class="formControls col-xs-8 col-sm-1">
+						<img src="images/arrow4.png" style="width:95px;height:100%;margin-top: 35px;" />
+					</div>
+					<div class="formControls col-xs-8 col-sm-2 node">
+						<p style="margin-top: 10px;"><span>发文</span></p>
+						<p><span>办理人:赵xx</span></p>
+					</div>
+				</div>
 				<div id="dvBrand" class="row cl" style="height: 36px; overflow: hidden;">
 					<label class="form-label col-xs-4 col-sm-1"><a href="#" class="more" onclick="return More(this)">更多</a></label>
 					<label class="form-label col-xs-4 col-sm-1">主办科室：</label>
@@ -56,18 +97,18 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="刘xx" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">发文文号：</label>
-					<div class="formControls col-xs-8 col-sm-2"style="margin-top: 5px;">
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="20171115" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">题目：</label>
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="关于xxxx公告的开展" placeholder="" id="" name="">
 					</div>
 					<label class="form-label col-xs-4 col-sm-2">发文日期：</label>
-					<div class="formControls col-xs-8 col-sm-2"style="margin-top: 5px;">
+					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="2017-11-15" placeholder="" id="" name="">
 					</div>
 					<label class="form-label col-xs-4 col-sm-2">打印纸质份数：</label>
@@ -82,7 +123,7 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="旗县" placeholder="" id="" name="">
 					</div>
-					
+
 					<label class="form-label col-xs-4 col-sm-2">审核：</label>
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="刘xxx" placeholder="" id="" name="">
@@ -91,7 +132,7 @@
 					<div class="formControls col-xs-8 col-sm-2" style="margin-top: 5px;">
 						<input type="text" class="input-text" value="张xxx" placeholder="" id="" name="">
 					</div>
-				<!--</div>
+					<!--</div>
 
 				<div class="row cl">-->
 					<label class="form-label col-xs-4 col-sm-2">附件：</label>
@@ -103,7 +144,7 @@
 						</span>
 					</div>
 				</div>
-				
+
 				<div class="row cl">
 					<label class="form-label col-xs-4 col-sm-1">详情：</label>
 					<div class="formControls col-xs-8 col-sm-11">
@@ -136,9 +177,9 @@
 				</div>-->
 				<div class="row cl">
 					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-1">
-						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交核稿</button>
-						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-						<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+						<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i>提交</button>
+						<!--<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>-->
 					</div>
 				</div>
 			</form>
@@ -160,13 +201,8 @@
 		<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js">
 		</script>
 		<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
-		<script type="text/javascript">
-			var ue = UE.getEditor('editor');
 
-			ue.ready(function() {
-				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
-			});
-			/*更多*/
+		<script type="text/javascript">
 			function More(a) {
 				var oDIv = document.getElementById('dvBrand'),
 					exp = a.innerHTML == '更多';
@@ -174,7 +210,13 @@
 				a.innerHTML = exp ? '收缩' : '更多'
 				return false;
 			}
-			
+
+			var ue = UE.getEditor('editor');
+
+			ue.ready(function() {
+				ue.setContent('<p>关于XXXX工作的落实情况...</p>');
+			});
+
 			$(".textarea").Huitextarealength({
 				minlength: 0,
 				maxlength: 200
@@ -319,8 +361,7 @@
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
-			
-			
+
 			var setting = {
 				check: {
 					enable: true,
@@ -435,8 +476,7 @@
 				t = $.fn.zTree.init(t, setting, zNodes);
 				var zTree = $.fn.zTree.getZTreeObj("tree");
 			});
-			
-			
+
 			/*查看*/
 			function product_show(title, url, id) {
 				var index = layer.open({
